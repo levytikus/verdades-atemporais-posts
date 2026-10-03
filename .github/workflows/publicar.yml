@@ -3,6 +3,10 @@ name: Publicar post do dia
 on:
   schedule:
     - cron: '50 22 * * *'   # 19h50 em Brasília; o GitHub costuma atrasar alguns minutos, então sai perto das 20h
+    # Reservas: o GitHub às vezes pula um horário agendado. Se o post já saiu, estas rodadas não repetem (publicados.json).
+    - cron: '7 23 * * *'    # 20h07
+    - cron: '23 23 * * *'   # 20h23
+    - cron: '41 23 * * *'   # 20h41
   workflow_dispatch:
     inputs:
       numero:
