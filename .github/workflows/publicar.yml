@@ -1,0 +1,49 @@
+name: Publicar post do dia
+
+on:
+  schedule:
+    - cron: '50 22 * * *'   # 19h50 em Brasília; o GitHub costuma atrasar alguns minutos, então sai perto das 20h
+  workflow_dispatch:
+    inputs:
+      numero:
+        description: 'Publicar agora este número (deixe vazio para o post de hoje)'
+        required: false
+      verificar:
+        description: 'Só testar a chave, sem publicar'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: Publicar
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          PAGE_ID: ${{ vars.PAGE_ID }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
+          NUMERO: ${{ github.event.inputs.numero }}
+          VERIFICAR: ${{ github.event.inputs.verificar == 'true' && '1' || '' }}
+        run: python publicar.py
+      - name: Registrar publicados
+        if: always()
+        run: |
+          if ! git diff --quiet publicados.json; then
+            git config user.name "verdades-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add publicados.json
+            git commit -m "Registra publicação de $(date -u +%F)"
+            git push
+          fi
