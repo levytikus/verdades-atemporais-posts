@@ -2,6 +2,11 @@ name: Publicar post do dia
 
 on:
   schedule:
+    # Reels do meio-dia (12h em Brasília) e reservas
+    - cron: '50 14 * * *'   # 11h50
+    - cron: '7 15 * * *'    # 12h07
+    - cron: '29 15 * * *'   # 12h29
+    # Post da noite (20h em Brasília)
     - cron: '50 22 * * *'   # 19h50 em Brasília; o GitHub costuma atrasar alguns minutos, então sai perto das 20h
     # Reservas: o agendador grátis do GitHub atrasa de 1 a 3 horas e às vezes pula horários.
     # O disparo principal é a tarefa agendada do Claude às 19h56. Estas rodadas só cobrem falhas:
@@ -16,6 +21,10 @@ on:
         required: false
       verificar:
         description: 'Só testar a chave, sem publicar'
+        type: boolean
+        default: false
+      testar_reel:
+        description: 'Com um número/chave: enviar o Reel ao Instagram e conferir, SEM publicar'
         type: boolean
         default: false
 
@@ -42,6 +51,7 @@ jobs:
           IG_USER_ID: ${{ vars.IG_USER_ID }}
           NUMERO: ${{ github.event.inputs.numero }}
           VERIFICAR: ${{ github.event.inputs.verificar == 'true' && '1' || '' }}
+          TESTAR_REEL: ${{ github.event.inputs.testar_reel == 'true' && '1' || '' }}
         run: python publicar.py
       - name: Registrar publicados
         if: always()
@@ -51,5 +61,6 @@ jobs:
             git config user.email "actions@users.noreply.github.com"
             git add publicados.json
             git commit -m "Registra publicação de $(date -u +%F)"
+            git pull --rebase -q || true
             git push
           fi
