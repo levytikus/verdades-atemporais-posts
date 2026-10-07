@@ -16,6 +16,7 @@ V = os.environ.get('GRAPH_VERSION', 'v24.0')
 G = f'https://graph.facebook.com/{V}'
 RAIZ = pathlib.Path(__file__).parent
 TOKEN = os.environ.get('META_TOKEN', '').strip()
+erro_ins = ''
 HOJE = datetime.datetime.now(ZoneInfo('America/Sao_Paulo')).date().isoformat()
 
 
@@ -42,6 +43,8 @@ def main():
     arq = RAIZ / 'metricas.json'
     dados = json.loads(arq.read_text()) if arq.exists() else {'conta': [], 'posts': {}}
 
+    global erro_ins
+    erro_ins = ''
     ig = conta_instagram()
     c = get(ig, fields='followers_count,media_count')
     dados['conta'] = [x for x in dados['conta'] if x['data'] != HOJE] + [
@@ -58,8 +61,8 @@ def main():
                         'reach,likes,comments,saved,shares'):
                 try:
                     bruto = get(f'{mid}/insights', metric=met).get('data', []); break
-                except RuntimeError:
-                    bruto = []
+                except RuntimeError as e:
+                    bruto = []; erro_ins = str(e)
             ins = {x['name']: (x.get('values') or [{}])[0].get('value', x.get('total_value', {}).get('value'))
                    for x in bruto}
         except Exception as e:
@@ -70,6 +73,8 @@ def main():
         print(k, tipo, ins)
 
     arq.write_text(json.dumps(dados, ensure_ascii=False, indent=1))
+    if erro_ins:
+        print(f'::warning::Instagram não devolveu os números (insights): {erro_ins}')
 
 
 if __name__ == '__main__':
