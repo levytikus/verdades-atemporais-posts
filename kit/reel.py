@@ -7,8 +7,10 @@ Uso:
 
 Como fica:
 - Fundo: a própria imagem ampliada, desfocada e escurecida, cobrindo a tela 9:16.
-- Frente: a imagem inteira (nada da frase é cortado), um pouco acima do centro para fugir
-  dos botões do Instagram, com um zoom lento e suave.
+- Frente: a imagem, um pouco acima do centro para fugir dos botões do Instagram, com um zoom
+  lento e suave. Reels não levam número: a faixa de cima (onde fica o "Nº") e o rodapé
+  (@, "ARRASTE →", "2/5") são cortados, e o vídeo leva só o @verdades_atemporais embaixo da imagem.
+  A contagem (Nº) é exclusiva dos posts do feed.
 - Post único: 8 s. Carrossel: cada slide fica ~3,2 s, com transição curta entre eles.
 - O primeiro quadro já mostra a frase (é o gancho e a capa). Sem fade de entrada nem de saída
   na imagem, para o loop ficar contínuo.
@@ -19,32 +21,55 @@ Requer ffmpeg, pillow e numpy.
 """
 import argparse, json, pathlib, subprocess, sys, math
 import numpy as np
-from PIL import Image, ImageFilter, ImageEnhance
+from PIL import Image, ImageFilter, ImageEnhance, ImageDraw, ImageFont
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MUSICAS = RAIZ / 'kit' / 'musicas'
 W, H, FPS = 1080, 1920, 30
 FRENTE_W = 1000                       # largura da imagem da frente (sobra margem para o zoom)
-CENTRO_Y = 880                        # centro vertical da imagem da frente
+CENTRO_Y = 840                        # centro vertical da imagem da frente
 ZOOM = 0.055                          # quanto a imagem cresce ao longo de cada slide
 SEG_UNICO, SEG_SLIDE, TRANS = 8.0, 3.2, 0.38
-RODAPE = 85                           # px cortados embaixo nos carrosséis (tira "ARRASTE →" e "2/5")
+TOPO = 105                            # px cortados em cima (tira o "Nº"; Reels não têm número)
+RODAPE = 98                           # px cortados embaixo (tira @, "ARRASTE →", "2/5"; o @ volta abaixo)
+ARROBA = '@verdades_atemporais'
+FONTE = RAIZ / 'kit' / 'fonts' / 'Archivo[wdth,wght].ttf'
 
 
 def ease(t):
     return 0.5 - 0.5 * math.cos(math.pi * min(max(t, 0), 1))
 
 
-def preparar(caminho, cortar_rodape=False):
+def assinatura(fundo, prop):
+    """Escreve o @ da página centralizado logo abaixo da imagem (posição fixa, não acompanha o zoom)."""
+    f = ImageFont.truetype(str(FONTE), 30)
+    try:
+        f.set_variation_by_axes([100, 600])
+    except Exception:
+        pass
+    d = ImageDraw.Draw(fundo)
+    texto = ARROBA.upper()
+    larg = d.textlength(texto, font=f) + 2.2 * (len(texto) - 1)
+    y = CENTRO_Y + FRENTE_W * (1 + ZOOM) * prop / 2 + 46
+    x = (W - larg) / 2
+    for ch in texto:
+        d.text((x, y), ch, font=f, fill=(255, 255, 255))
+        x += d.textlength(ch, font=f) + 2.2
+    return fundo
+
+
+def preparar(caminho, cortar_rodape=True):
     img = Image.open(caminho).convert('RGB')
     if cortar_rodape:
-        img = img.crop((0, 0, img.width, img.height - round(RODAPE * img.height / 1350)))
+        k = img.height / 1350
+        img = img.crop((0, round(TOPO * k), img.width, img.height - round(RODAPE * k)))
     # fundo: cobre 9:16, desfoca e escurece
     s = max(W / img.width, H / img.height) * 1.08
     fundo = img.resize((round(img.width * s), round(img.height * s)), Image.LANCZOS)
     x, y = (fundo.width - W) // 2, (fundo.height - H) // 2
     fundo = fundo.crop((x, y, x + W, y + H)).filter(ImageFilter.GaussianBlur(42))
     fundo = ImageEnhance.Brightness(fundo).enhance(0.62)
+    fundo = assinatura(fundo, img.height / img.width)
     # frente em resolução alta para o zoom não perder nitidez
     base = img.resize((round(FRENTE_W * (1 + ZOOM) * 1.5), round(FRENTE_W * (1 + ZOOM) * 1.5 * img.height / img.width)), Image.LANCZOS)
     sombra = Image.new('L', (W, H), 0)
@@ -82,7 +107,7 @@ def gerar(imagens, numero, saida):
     seg = SEG_UNICO if len(imagens) == 1 else SEG_SLIDE
     total = seg * len(imagens) if len(imagens) == 1 else SEG_SLIDE * len(imagens)
     nq = round(total * FPS)
-    preps = [preparar(i, cortar_rodape=len(imagens) > 1) for i in imagens]
+    preps = [preparar(i) for i in imagens]
 
     trilhas = sorted(p for p in MUSICAS.glob('*') if p.suffix.lower() in ('.wav', '.mp3', '.m4a'))
     if not trilhas:

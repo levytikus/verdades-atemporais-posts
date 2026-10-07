@@ -22,12 +22,13 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 - **Cenas:** alternar entre placa, metro, placas, papel, outdoor e enter, sem repetir a mesma cena em posts seguidos. O enter serve para posts de interação ("complete a frase").
 - **Frases:** sempre originais. Nada de citações nem nome de autor nas imagens.
 - **Estratégia (desde 07/10/2026): Reel primeiro.** A página tinha zero Reels e por isso não chegava a quem não segue. Agora são 2 publicações por dia:
-  - **12h · Reel de frase:** frase nova, numerada, uma cena só, publicada como Reel (`"video"` no fila.json, gerado com `reel.py`). Frases de identificação e contraste, escritas para serem enviadas a alguém.
-  - **20h · post da noite:** como antes (carrosséis e posts únicos). Post único sai como Reel (`"video"` + `"imagens"` de reserva); carrossel sai como carrossel.
-  - Cada lote semanal tem 14 itens: 7 Reels de frase (12h) + 7 posts da noite (20h). A numeração segue em ordem de publicação.
+  - **12h · Reel de frase:** uma frase forte, uma cena só, publicada como Reel (`"video"` no fila.json, gerado com `reel.py`). Frases de identificação e contraste, escritas para serem enviadas a alguém.
+  - **20h · post do feed:** como sempre (posts únicos, carrosséis e interação), numerados, como imagem ou carrossel. Nunca como Reel.
+  - Cada lote semanal tem 14 itens: 7 Reels de frase (12h) + 7 posts do feed (20h).
+- **Contagem (regra do Levy):** o "Nº" é exclusivo dos posts do feed (20h) e só eles avançam a numeração e a sequência de cores. Reels **não têm número**: o `reel.py` corta a faixa do Nº e o rodapé e escreve só o @verdades_atemporais embaixo da imagem. No fila.json, o Reel usa o `numero` do post do feed do mesmo dia (só para a cor e a pasta) e `"chave": "<numero>-reel"`; a legenda do Reel não cita número, a não ser que convide para o post da noite ("Hoje às 20h ela entra no feed como a verdade Nº X").
 - **Temas da fase de teste:** tempo e finitude (25%), quem fica nas fases difíceis (20%), julgamento e empatia (15%), caráter e valores (15%), aprovação e autenticidade (15%), maturidade e perdão a si mesmo (10%). Ajustar toda semana pelo `metricas.json` (dobrar o que tem mais compartilhamentos e alcance).
 - **Formatos da noite:** misturar carrosséis (4 a 6 slides) e posts únicos. Por semana, 2 ou 3 carrosséis e 1 ou 2 posts de interação.
-- **Reels:** nada de "ARRASTE →" nem "1/5" em imagem que vira Reel de cena única (use o rodapé "SALVA PRA LEMBRAR →" ou "MANDA PRA ALGUÉM →"). Nos Reels de carrossel o reel.py corta o rodapé sozinho.
+- **Reels:** o reel.py corta sozinho o Nº (faixa de cima) e o rodapé de qualquer imagem; deixe a frase longe das bordas de cima e de baixo (pelo menos 110 px).
 - **Legendas:** 3 a 6 linhas; nos Reels, a primeira linha é a própria frase (é o que aparece antes do "mais"), tom próximo e reflexivo, uma pergunta ou chamada para salvar, comentar ou enviar, e 5 ou 6 hashtags começando por #verdadesatemporais.
 
 ## Formato do lote (lote.json)
