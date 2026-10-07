@@ -3,7 +3,7 @@
   {
    "data": "2026-10-07",
    "seguidores": 2057,
-   "posts": 822
+   "posts": 823
   }
  ],
  "posts": {
@@ -66,6 +66,21 @@
    "saved": 1,
    "shares": 0,
    "total_interactions": 1
+  },
+  "819-reel": {
+   "numero": 819,
+   "data": "2026-10-07",
+   "hora": "15:00",
+   "tipo": "REELS",
+   "link": "https://www.instagram.com/reel/DeM9cD5iRO-/",
+   "atualizado": "2026-10-07",
+   "reach": 0,
+   "views": 0,
+   "likes": 0,
+   "comments": 0,
+   "saved": 0,
+   "shares": 0,
+   "total_interactions": 0
   }
  }
 }
