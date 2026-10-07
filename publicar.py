@@ -121,4 +121,10 @@ def main():
     if erros: sys.exit('Falhas:\n' + '\n'.join(erros))
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except SystemExit as e:
+        if e.code not in (None, 0):
+            print('::error::' + str(e.code).replace('\n', ' | ')); raise
+    except Exception as e:
+        print(f'::error::{type(e).__name__}: {e}'); raise
