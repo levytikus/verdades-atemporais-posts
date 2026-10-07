@@ -96,6 +96,21 @@ def quadro(prep, t):
     return frente(prep, t, 0, prep[0].copy())
 
 
+def sem_numero(img):
+    """Trava da regra da contagem: procura "Nº 123" no quadro (tesseract). Se não houver OCR, avisa e segue."""
+    import re, shutil
+    if not shutil.which('tesseract'):
+        print('Aviso: tesseract não instalado; confira o quadro a olho (Reel não pode ter Nº).'); return True
+    import tempfile, subprocess as sp
+    with tempfile.NamedTemporaryFile(suffix='.png') as t:
+        img.convert('L').resize((W, H)).save(t.name)
+        txt = sp.run(['tesseract', t.name, '-', '--psm', '11'], capture_output=True, text=True).stdout
+    achou = re.search(r'N\s*[º°o0ª]\s*\.?\s*\d{3}', txt)
+    if achou:
+        print(f'Encontrado no quadro: {achou.group(0)!r}')
+    return not achou
+
+
 def duracao_audio(f):
     r = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(f)],
                        capture_output=True, text=True)
@@ -108,6 +123,10 @@ def gerar(imagens, numero, saida):
     total = seg * len(imagens) if len(imagens) == 1 else SEG_SLIDE * len(imagens)
     nq = round(total * FPS)
     preps = [preparar(i) for i in imagens]
+    for i, pr in enumerate(preps):
+        if not sem_numero(quadro(pr, 0)):
+            sys.exit(f'PARADO: a imagem {imagens[i]} ainda mostra o Nº depois do corte (o número está dentro da cena). '
+                     'Reels não podem ter número: apague o Nº dessa imagem (ex.: cv2.inpaint) e gere de novo.')
 
     trilhas = sorted(p for p in MUSICAS.glob('*') if p.suffix.lower() in ('.wav', '.mp3', '.m4a'))
     if not trilhas:
