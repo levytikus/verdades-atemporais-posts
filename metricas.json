@@ -13,7 +13,14 @@
    "hora": "20:00",
    "tipo": "CAROUSEL_ALBUM",
    "link": "https://www.instagram.com/p/DeDO6lODD-7/",
-   "atualizado": "2026-10-07"
+   "atualizado": "2026-10-07",
+   "reach": 11,
+   "views": 18,
+   "likes": 1,
+   "comments": 0,
+   "saved": 0,
+   "shares": 0,
+   "total_interactions": 1
   },
   "816": {
    "numero": 816,
@@ -21,7 +28,14 @@
    "hora": "20:00",
    "tipo": "IMAGE",
    "link": "https://www.instagram.com/p/DeF3AzAjINI/",
-   "atualizado": "2026-10-07"
+   "atualizado": "2026-10-07",
+   "reach": 13,
+   "views": 34,
+   "likes": 1,
+   "comments": 0,
+   "saved": 0,
+   "shares": 0,
+   "total_interactions": 1
   },
   "817": {
    "numero": 817,
@@ -29,7 +43,14 @@
    "hora": "20:00",
    "tipo": "CAROUSEL_ALBUM",
    "link": "https://www.instagram.com/p/DeIVcB1HWVQ/",
-   "atualizado": "2026-10-07"
+   "atualizado": "2026-10-07",
+   "reach": 8,
+   "views": 16,
+   "likes": 1,
+   "comments": 0,
+   "saved": 1,
+   "shares": 0,
+   "total_interactions": 2
   },
   "818": {
    "numero": 818,
@@ -37,7 +58,14 @@
    "hora": "20:00",
    "tipo": "CAROUSEL_ALBUM",
    "link": "https://www.instagram.com/p/DeIyPl9F4Le/",
-   "atualizado": "2026-10-07"
+   "atualizado": "2026-10-07",
+   "reach": 5,
+   "views": 19,
+   "likes": 0,
+   "comments": 0,
+   "saved": 1,
+   "shares": 0,
+   "total_interactions": 1
   }
  }
 }
