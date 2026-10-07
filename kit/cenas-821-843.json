@@ -13,7 +13,14 @@
   "estilo": "caneta"
  },
  "821-04": {
-  "estilo": "recibo"
+  "estilo": "recibo",
+  "folga": 0.03,
+  "pad": 0.02,
+  "zoom": [
+   540,
+   620,
+   1.5
+  ]
  },
  "821-05": {
   "estilo": "serifa",
@@ -35,10 +42,22 @@
   "estilo": "mao"
  },
  "824-01": {
-  "estilo": "giz"
+  "estilo": "giz",
+  "caixa": [
+   50,
+   210,
+   975,
+   1170
+  ]
  },
  "824-02": {
-  "estilo": "giz_cera"
+  "estilo": "giz_cera",
+  "caixa": [
+   110,
+   120,
+   870,
+   1130
+  ]
  },
  "824-03": {
   "estilo": "mao"
@@ -47,22 +66,32 @@
   "estilo": "giz_cera"
  },
  "824-05": {
-  "estilo": "impresso"
+  "estilo": "impresso",
+  "caixa": [
+   160,
+   300,
+   920,
+   1020
+  ]
  },
  "825-01": {
   "estilo": "carimbo",
-  "semente": [
-   500,
-   800
+  "caixa": [
+   270,
+   480,
+   725,
+   1180
   ]
  },
  "826-01": {
   "estilo": "pincel",
-  "semente": [
-   540,
-   520
-  ],
-  "tinta": "#2f4f2f"
+  "tinta": "#2f4f2f",
+  "caixa": [
+   150,
+   265,
+   965,
+   790
+  ]
  },
  "826-02": {
   "estilo": "feltro"
@@ -75,13 +104,21 @@
  },
  "826-05": {
   "estilo": "impresso",
-  "semente": [
-   540,
-   900
+  "caixa": [
+   240,
+   560,
+   820,
+   1150
   ]
  },
  "826-06": {
-  "estilo": "serifa"
+  "estilo": "serifa",
+  "caixa": [
+   150,
+   300,
+   950,
+   1080
+  ]
  },
  "827-01": {
   "estilo": "marcador",
@@ -92,9 +129,11 @@
  },
  "828-01": {
   "estilo": "serifa",
-  "semente": [
-   650,
-   700
+  "caixa": [
+   360,
+   280,
+   900,
+   1120
   ]
  },
  "828-02": {
@@ -109,16 +148,34 @@
  },
  "828-04": {
   "estilo": "caneta",
-  "tinta": "#3b2a1a"
+  "tinta": "#3b2a1a",
+  "caixa": [
+   250,
+   400,
+   830,
+   1190
+  ]
  },
  "829-01": {
   "estilo": "maquina"
  },
  "830-01": {
-  "estilo": "tela"
+  "estilo": "tela",
+  "caixa": [
+   372,
+   210,
+   730,
+   1075
+  ]
  },
  "831-01": {
-  "estilo": "giz"
+  "estilo": "giz",
+  "caixa": [
+   80,
+   330,
+   1000,
+   1000
+  ]
  },
  "831-02": {
   "estilo": "impresso",
@@ -136,34 +193,40 @@
  },
  "831-04": {
   "estilo": "marcador",
-  "semente": [
-   540,
-   580
-  ],
-  "tinta": "#1f3a8a"
+  "tinta": "#1f3a8a",
+  "caixa": [
+   120,
+   150,
+   940,
+   960
+  ]
  },
  "831-05": {
   "estilo": "impresso",
   "zoom": [
    583,
    520,
-   1.6
+   1.9
   ]
  },
  "832-01": {
   "estilo": "impresso",
-  "semente": [
-   470,
-   800
+  "caixa": [
+   290,
+   520,
+   690,
+   1180
   ]
  },
  "833-01": {
   "estilo": "caneta",
-  "semente": [
-   500,
-   820
-  ],
-  "tinta": "#222"
+  "tinta": "#222",
+  "caixa": [
+   210,
+   350,
+   800,
+   1180
+  ]
  },
  "833-02": {
   "estilo": "mao",
@@ -174,9 +237,11 @@
  },
  "833-03": {
   "estilo": "pincel",
-  "semente": [
-   550,
-   560
+  "caixa": [
+   250,
+   290,
+   860,
+   1070
   ]
  },
  "833-04": {
@@ -187,19 +252,28 @@
  },
  "834-01": {
   "estilo": "mao",
-  "semente": [
-   520,
-   700
+  "caixa": [
+   230,
+   290,
+   815,
+   1110
   ]
  },
  "835-01": {
-  "estilo": "pincel"
+  "estilo": "pincel",
+  "caixa": [
+   130,
+   150,
+   900,
+   1000
+  ]
  },
  "836-01": {
   "estilo": "serifa",
-  "semente": [
+  "zoom": [
    540,
-   560
+   560,
+   1.4
   ]
  },
  "836-02": {
@@ -217,13 +291,21 @@
  },
  "837-01": {
   "estilo": "led",
-  "semente": [
-   540,
-   470
+  "caixa": [
+   60,
+   175,
+   1020,
+   790
   ]
  },
  "838-01": {
-  "estilo": "caneta"
+  "estilo": "caneta",
+  "caixa": [
+   265,
+   300,
+   835,
+   1100
+  ]
  },
  "838-02": {
   "estilo": "giz",
@@ -232,7 +314,9 @@
    200,
    950,
    1040
-  ]
+  ],
+  "tinta": "#ffffff",
+  "grao": 0.3
  },
  "838-03": {
   "estilo": "caneta",
@@ -254,9 +338,11 @@
  },
  "838-05": {
   "estilo": "carimbo",
-  "semente": [
-   540,
-   850
+  "caixa": [
+   210,
+   500,
+   830,
+   1200
   ]
  },
  "839-01": {
@@ -284,28 +370,34 @@
  },
  "841-02": {
   "estilo": "led",
-  "semente": [
-   520,
-   670
-  ],
-  "tinta": "#ff3b30"
+  "tinta": "#ff3b30",
+  "caixa": [
+   90,
+   300,
+   950,
+   1000
+  ]
  },
  "841-03": {
   "estilo": "marcador"
  },
  "841-04": {
   "estilo": "carimbo",
-  "semente": [
-   400,
-   560
-  ],
-  "tol": 14
+  "tol": 14,
+  "caixa": [
+   170,
+   360,
+   930,
+   860
+  ]
  },
  "841-05": {
   "estilo": "serifa",
-  "semente": [
-   500,
-   620
+  "caixa": [
+   180,
+   370,
+   880,
+   960
   ]
  },
  "842-01": {
@@ -319,9 +411,11 @@
  },
  "843-01": {
   "estilo": "impresso",
-  "semente": [
-   560,
-   600
+  "caixa": [
+   310,
+   260,
+   835,
+   970
   ]
  },
  "843-02": {
@@ -332,7 +426,13 @@
   ]
  },
  "843-03": {
-  "estilo": "caneta"
+  "estilo": "caneta",
+  "caixa": [
+   330,
+   320,
+   770,
+   990
+  ]
  },
  "843-04": {
   "estilo": "marcador",
@@ -346,6 +446,9 @@
   "semente": [
    650,
    560
-  ]
+  ],
+  "uma_linha": true,
+  "sem_apoio": true,
+  "folga": 0.06
  }
 }

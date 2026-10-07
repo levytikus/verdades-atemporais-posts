@@ -75,12 +75,12 @@ def ordenar(p):
     s, d = p.sum(1), np.diff(p, axis=1).ravel()
     return np.float32([p[np.argmin(s)], p[np.argmin(d)], p[np.argmax(s)], p[np.argmax(d)]])
 
-def detectar(img, semente, tol=9):
+def detectar(img, semente, tol=28):
     a = cv2.GaussianBlur(np.array(img), (0, 0), 2.2)
     mask = np.zeros((H + 2, W + 2), np.uint8)
     cv2.floodFill(a.copy(), mask, tuple(int(v) for v in semente), (0, 0, 0), (tol,) * 3, (tol,) * 3,
-                  flags=4 | cv2.FLOODFILL_MASK_ONLY | (255 << 8))
-    m = cv2.morphologyEx(mask[1:-1, 1:-1], cv2.MORPH_CLOSE, np.ones((25, 25), np.uint8))
+                  flags=4 | cv2.FLOODFILL_MASK_ONLY | cv2.FLOODFILL_FIXED_RANGE | (255 << 8))
+    m = cv2.morphologyEx(mask[1:-1, 1:-1], cv2.MORPH_CLOSE, np.ones((41, 41), np.uint8))
     cnts, _ = cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     c = max(cnts, key=cv2.contourArea)
     hull = cv2.convexHull(c)
@@ -134,8 +134,6 @@ def html_texto(est, cfg, linhas, apoio, lacuna, cor, bw, bh):
     linhas_html = []
     for i, (t, dest) in enumerate(linhas):
         tx = e(t)
-        if lacuna and i == len(linhas) - 1:
-            tx += " <span class='lac'>&nbsp;</span>"
         estilo_l = f"color:{multicor[i % len(multicor)]};" if multicor and not dest else ''
         if dest:
             if hlmode == 'marca': tx = f"<span class='mk'>{tx}</span>"
@@ -145,8 +143,12 @@ def html_texto(est, cfg, linhas, apoio, lacuna, cor, bw, bh):
             elif hlmode == 'cor': tx = f"<span style='color:{neon if escuro else cfg.get('cor_destaque', '#b3261e')}'>{tx}</span>"
             elif hlmode == 'cor_escura': tx = f"<span style='color:{cfg.get('cor_destaque', '#b3261e')}'>{tx}</span>"
         linhas_html.append(f"<div class='l' style='{estilo_l}'>{tx}</div>")
+    if lacuna:
+        linhas_html.append("<div class='l'><span class='lac'>&nbsp;</span></div>")
+    if cfg.get('uma_linha'):
+        linhas_html = ["<div class='l'>" + ' '.join(h[h.index('>') + 1:-6] for h in linhas_html) + "</div>"]
     ap = ''
-    if apoio:
+    if apoio and not cfg.get('sem_apoio'):
         ap = '<br>'.join(e(x) for x in apoio.split('|'))
         afonte = cfg.get('apoio_fonte', E['apoio'])
         apeso = '600' if afonte == 'AR' else 'normal'
@@ -177,7 +179,7 @@ body{{width:{bw}px;height:{bh}px;background:{fundo};overflow:hidden}}
 .bk{{background:{corp};padding:.02em .12em 0;margin-left:-.1em}}
 .iv{{background:{tinta};color:#fff;padding:0 .15em}}
 .ul{{text-decoration:underline;text-decoration-color:{corp};text-decoration-thickness:.12em;text-underline-offset:.12em}}
-.lac{{display:inline-block;width:3.4em;border-bottom:.08em solid {corp if not escuro else neon};margin-left:.1em}}
+.lac{{display:inline-block;width:4.2em;border-bottom:.08em solid {corp if not escuro else neon};margin-left:.1em}}
 .ap{{margin-top:.7em;font-size:.42em;line-height:1.2;color:{tinta};white-space:normal;max-width:100%;text-transform:none;letter-spacing:0}}
 .rc{{font-size:.5em;opacity:.8;margin:.2em 0}}
 .tb{{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:{bh*0.02:.0f}px {bw*0.05:.0f}px;font:600 {bh*0.03:.0f}px 'AR';color:#e0a800}}
@@ -244,7 +246,7 @@ async def gerar(lote, cenas, fotos, out, debug=False):
                 elif 'caixa' in cfg:
                     x0, y0, x1, y1 = cfg['caixa']; quad = np.float32([(x0, y0), (x1, y0), (x1, y1), (x0, y1)])
                 else:
-                    quad, _ = detectar(base, cfg.get('semente', (W // 2, H // 2)), cfg.get('tol', 9))
+                    quad, _ = detectar(base, cfg.get('semente', (W // 2, H // 2)), cfg.get('tol', 28))
                 q2 = encolher(quad, cfg.get('folga', 0.1))
                 bw = int(max(np.linalg.norm(q2[1] - q2[0]), np.linalg.norm(q2[2] - q2[3])) * 1.6)
                 bh = int(max(np.linalg.norm(q2[3] - q2[0]), np.linalg.norm(q2[2] - q2[1])) * 1.6)
