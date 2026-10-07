@@ -16,6 +16,8 @@ Cada item da fila pode ter:
   imagens  lista de imagens (post de foto ou carrossel)
   video    caminho de um .mp4 vertical: publica como Reel no Instagram e no Facebook.
            Se o Reel falhar e houver imagens, publica as imagens no lugar (não fica dia sem post).
+  story    caminho de uma imagem 1080x1920: publica como Story no Instagram e na página do Facebook.
+           Falha de Story só gera aviso (não derruba a execução); os horários reserva tentam de novo.
   chave    identificador no publicados.json (padrão: o número). Use quando o mesmo número sai
            duas vezes, ex.: "821-reel" para o Reel de um carrossel.
 """
@@ -114,7 +116,19 @@ def reel_facebook(page, token, post, publicar=True):
         video_state='PUBLISHED', description=post['legenda'])
     return vid
 
+def story_instagram(ig, token, post, publicar=True):
+    c = api('POST', f'{ig}/media', token, media_type='STORIES', image_url=url(post['story']))['id']
+    esperar(c, token)
+    if not publicar: return c
+    return api('POST', f'{ig}/media_publish', token, creation_id=c)['id']
+
+def story_facebook(page, token, post):
+    foto = api('POST', f'{page}/photos', token, url=url(post['story']), published='false')['id']
+    return api('POST', f'{page}/photo_stories', token, photo_id=foto).get('post_id', foto)
+
 def publicar_instagram(ig, token, post):
+    if post.get('story'):
+        return story_instagram(ig, token, post)
     if post.get('video'):
         try:
             return reel_instagram(ig, token, post)
@@ -134,6 +148,8 @@ def publicar_instagram(ig, token, post):
     return api('POST', f'{ig}/media_publish', token, creation_id=c)['id']
 
 def publicar_facebook(page, token, post):
+    if post.get('story'):
+        return story_facebook(page, token, post)
     if post.get('video'):
         try:
             return reel_facebook(page, token, post)
@@ -165,11 +181,14 @@ def main():
         if not posts: return
     if os.environ.get('VERIFICAR') == '1':
         for p in posts:
-            tipo = 'Reel' if p.get('video') else f'{len(p["imagens"])} imagem/ns'
+            tipo = 'Story' if p.get('story') else 'Reel' if p.get('video') else f'{len(p["imagens"])} imagem/ns'
             print(f'[teste] publicaria {chave_de(p)} ({tipo}, {p.get("hora", "20:00")}) em {p["destinos"]}')
         print('Chave e contas OK.'); return
     if os.environ.get('TESTAR_REEL') == '1':
         for p in posts:
+            if p.get('story'):
+                c = story_instagram(ig, TOKEN, p, publicar=False)
+                print(f'[teste] Instagram aceitou o Story de {chave_de(p)} (rascunho {c}, não publicado).'); continue
             if not p.get('video'): print(f'{chave_de(p)} não tem vídeo.'); continue
             c = reel_instagram(ig, TOKEN, p, publicar=False)
             print(f'[teste] Instagram aceitou e processou o Reel de {chave_de(p)} (rascunho {c}, não publicado).')
@@ -186,6 +205,8 @@ def main():
                 publicados[chave] = {'id': pid, 'quando': datetime.datetime.now(ZoneInfo('America/Sao_Paulo')).isoformat(timespec='minutes')}
                 print(f'Publicado {chave} → {pid}')
             except Exception as e:
+                if p.get('story'):
+                    print(f'::warning::Story {chave} não saiu: {e}'); continue
                 erros.append(f'{chave}: {e}'); print(f'ERRO {chave}: {e}')
             pub_f.write_text(json.dumps(publicados, ensure_ascii=False, indent=1))
     if erros: sys.exit('Falhas:\n' + '\n'.join(erros))

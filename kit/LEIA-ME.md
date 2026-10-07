@@ -6,6 +6,7 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 
 - `gerar2.py`: gerador atual. Uso: `python3 gerar2.py lote.json cenas.json pasta_das_fotos pasta_de_saida` (`--debug` mostra a área detectada). Estilos de escrita: marcador, caneta, mão, lápis, giz de cera, máquina, recibo, carimbo, impresso, serifa, tela, pincel, batom, letreiro, giz, feltro, neon, led.
 - `reel.py`: transforma as imagens de um post num Reel vertical 1080×1920 com música (`python3 kit/reel.py 850` gera `posts/850-.../reel.mp4` a partir do fila.json). Requer ffmpeg, pillow e numpy.
+- `story.py`: gera o Story das 20h05 a partir da primeira imagem do post do feed (`python3 kit/story.py 850`).
 - `musicas/`: trilhas livres de direitos geradas para a página (o reel.py escolhe uma pelo número). Para acrescentar uma trilha: gerar no vidIQ e baixar com o workflow "Baixar trilha sonora".
 - `gerar.py`: gerador antigo (cenas fixas), usado até o Nº 820. Gera as imagens a partir de um lote em JSON. Uso: `python3 gerar.py lote.json pasta_de_saida`.
   Requer Python com `playwright` (com Chromium instalado), `opencv-python-headless`, `numpy` e `pillow`.
@@ -24,7 +25,8 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 - **Estratégia (desde 07/10/2026): Reel primeiro.** A página tinha zero Reels e por isso não chegava a quem não segue. Agora são 2 publicações por dia:
   - **12h · Reel de frase:** uma frase forte, uma cena só, publicada como Reel (`"video"` no fila.json, gerado com `reel.py`). Frases de identificação e contraste, escritas para serem enviadas a alguém.
   - **20h · post do feed:** como sempre (posts únicos, carrosséis e interação), numerados, como imagem ou carrossel. Nunca como Reel.
-  - Cada lote semanal tem 14 itens: 7 Reels de frase (12h) + 7 posts do feed (20h).
+  - **20h05 · Story:** a verdade da noite em 1080×1920 com a etiqueta "NOVA VERDADE NO FEED" na cor do post, gerada com `python3 kit/story.py <numero>` (fica em `posts/<pasta>/story.jpg`). Entra no fila.json logo depois do post do feed, com `"chave": "<numero>-story"`, hora "20:05" e `"story"`. Story pode mostrar o Nº, porque divulga o post numerado.
+  - Cada lote semanal tem 14 itens: 7 Reels de frase (12h) + 7 posts do feed (20h), e cada post do feed ganha o seu Story.
 - **Contagem (regra do Levy):** o "Nº" é exclusivo dos posts do feed (20h) e só eles avançam a numeração e a sequência de cores. Reels **não têm número**: o `reel.py` corta a faixa do Nº e o rodapé e escreve só o @verdades_atemporais embaixo da imagem. Os Reels saem só na aba Reels (não aparecem na grade do perfil): a grade é exclusiva das verdades numeradas. No fila.json, o Reel usa o `numero` do post do feed do mesmo dia (só para a cor e a pasta) e `"chave": "<numero>-reel"`; a legenda do Reel não cita número, a não ser que convide para o post da noite ("Hoje às 20h ela entra no feed como a verdade Nº X").
 - **Temas da fase de teste:** tempo e finitude (25%), quem fica nas fases difíceis (20%), julgamento e empatia (15%), caráter e valores (15%), aprovação e autenticidade (15%), maturidade e perdão a si mesmo (10%). Ajustar toda semana pelo `metricas.json` (dobrar o que tem mais compartilhamentos e alcance).
 - **Formatos da noite:** misturar carrosséis (4 a 6 slides) e posts únicos. Por semana, 2 ou 3 carrosséis e 1 ou 2 posts de interação.

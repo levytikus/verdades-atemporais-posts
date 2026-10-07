@@ -44,7 +44,7 @@ def assinatura(fundo, prop):
     """Escreve o @ da página centralizado logo abaixo da imagem (posição fixa, não acompanha o zoom)."""
     f = ImageFont.truetype(str(FONTE), 30)
     try:
-        f.set_variation_by_axes([100, 600])
+        f.set_variation_by_axes([600, 100])
     except Exception:
         pass
     d = ImageDraw.Draw(fundo)
