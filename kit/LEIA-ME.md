@@ -12,7 +12,7 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 
 ## Regras da página
 
-- **Numeração:** continua a contagem do Instagram. O último post pronto é o Nº 820.
+- **Numeração:** continua a contagem do Instagram. O último post pronto é o Nº 843.
 - **Cor de destaque:** cada post tem uma cor, sempre nesta ordem: verde, laranja, azul, rosa, amarelo, vermelho, verde limão, azul bebê, roxo, amarelo trator, rosa choque, e depois recomeça. O 815 foi roxo, então o 821 é rosa, o 822 amarelo e o 823 vermelho. O `gerar.py` calcula a cor sozinho a partir do número.
 - **Visual:** a frase aparece num objeto do mundo real (cena). Tipografia pesada em caixa alta, uma palavra marcada com a cor do post e uma linha de apoio menor. No topo aparece só o número (Nº 821), discreto.
 - **Cenas:** alternar entre placa, metro, placas, papel, outdoor e enter, sem repetir a mesma cena em posts seguidos. O enter serve para posts de interação ("complete a frase").
