@@ -99,7 +99,7 @@ def esperar_video(container, token):
 
 def reel_instagram(ig, token, post, publicar=True):
     c = api('POST', f'{ig}/media', token, media_type='REELS', upload_type='resumable',
-            caption=post['legenda'], share_to_feed='true', thumb_offset='0')['id']
+            caption=post['legenda'], share_to_feed='false', thumb_offset='0')['id']
     enviar_binario(f'{RUPLOAD}/ig-api-upload/{V}/{c}', token, post['video'])
     esperar_video(c, token)
     if not publicar: return c
