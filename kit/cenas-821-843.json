@@ -1,0 +1,351 @@
+{
+ "821-01": {
+  "estilo": "marcador"
+ },
+ "821-02": {
+  "estilo": "maquina",
+  "semente": [
+   520,
+   420
+  ]
+ },
+ "821-03": {
+  "estilo": "caneta"
+ },
+ "821-04": {
+  "estilo": "recibo"
+ },
+ "821-05": {
+  "estilo": "serifa",
+  "semente": [
+   540,
+   850
+  ]
+ },
+ "822-01": {
+  "estilo": "neon",
+  "caixa": [
+   130,
+   230,
+   950,
+   1060
+  ]
+ },
+ "823-01": {
+  "estilo": "mao"
+ },
+ "824-01": {
+  "estilo": "giz"
+ },
+ "824-02": {
+  "estilo": "giz_cera"
+ },
+ "824-03": {
+  "estilo": "mao"
+ },
+ "824-04": {
+  "estilo": "giz_cera"
+ },
+ "824-05": {
+  "estilo": "impresso"
+ },
+ "825-01": {
+  "estilo": "carimbo",
+  "semente": [
+   500,
+   800
+  ]
+ },
+ "826-01": {
+  "estilo": "pincel",
+  "semente": [
+   540,
+   520
+  ],
+  "tinta": "#2f4f2f"
+ },
+ "826-02": {
+  "estilo": "feltro"
+ },
+ "826-03": {
+  "estilo": "caneta"
+ },
+ "826-04": {
+  "estilo": "giz"
+ },
+ "826-05": {
+  "estilo": "impresso",
+  "semente": [
+   540,
+   900
+  ]
+ },
+ "826-06": {
+  "estilo": "serifa"
+ },
+ "827-01": {
+  "estilo": "marcador",
+  "semente": [
+   560,
+   660
+  ]
+ },
+ "828-01": {
+  "estilo": "serifa",
+  "semente": [
+   650,
+   700
+  ]
+ },
+ "828-02": {
+  "estilo": "letreiro",
+  "semente": [
+   540,
+   450
+  ]
+ },
+ "828-03": {
+  "estilo": "lapis"
+ },
+ "828-04": {
+  "estilo": "caneta",
+  "tinta": "#3b2a1a"
+ },
+ "829-01": {
+  "estilo": "maquina"
+ },
+ "830-01": {
+  "estilo": "tela"
+ },
+ "831-01": {
+  "estilo": "giz"
+ },
+ "831-02": {
+  "estilo": "impresso",
+  "semente": [
+   540,
+   690
+  ]
+ },
+ "831-03": {
+  "estilo": "mao",
+  "semente": [
+   540,
+   700
+  ]
+ },
+ "831-04": {
+  "estilo": "marcador",
+  "semente": [
+   540,
+   580
+  ],
+  "tinta": "#1f3a8a"
+ },
+ "831-05": {
+  "estilo": "impresso",
+  "zoom": [
+   583,
+   520,
+   1.6
+  ]
+ },
+ "832-01": {
+  "estilo": "impresso",
+  "semente": [
+   470,
+   800
+  ]
+ },
+ "833-01": {
+  "estilo": "caneta",
+  "semente": [
+   500,
+   820
+  ],
+  "tinta": "#222"
+ },
+ "833-02": {
+  "estilo": "mao",
+  "semente": [
+   560,
+   780
+  ]
+ },
+ "833-03": {
+  "estilo": "pincel",
+  "semente": [
+   550,
+   560
+  ]
+ },
+ "833-04": {
+  "estilo": "marcador"
+ },
+ "833-05": {
+  "estilo": "caneta"
+ },
+ "834-01": {
+  "estilo": "mao",
+  "semente": [
+   520,
+   700
+  ]
+ },
+ "835-01": {
+  "estilo": "pincel"
+ },
+ "836-01": {
+  "estilo": "serifa",
+  "semente": [
+   540,
+   560
+  ]
+ },
+ "836-02": {
+  "estilo": "marcador",
+  "semente": [
+   570,
+   500
+  ]
+ },
+ "836-03": {
+  "estilo": "mao"
+ },
+ "836-04": {
+  "estilo": "pincel"
+ },
+ "837-01": {
+  "estilo": "led",
+  "semente": [
+   540,
+   470
+  ]
+ },
+ "838-01": {
+  "estilo": "caneta"
+ },
+ "838-02": {
+  "estilo": "giz",
+  "caixa": [
+   130,
+   200,
+   950,
+   1040
+  ]
+ },
+ "838-03": {
+  "estilo": "caneta",
+  "caixa": [
+   140,
+   300,
+   980,
+   1000
+  ]
+ },
+ "838-04": {
+  "estilo": "batom",
+  "caixa": [
+   150,
+   170,
+   950,
+   760
+  ]
+ },
+ "838-05": {
+  "estilo": "carimbo",
+  "semente": [
+   540,
+   850
+  ]
+ },
+ "839-01": {
+  "estilo": "impresso",
+  "caixa": [
+   300,
+   380,
+   780,
+   820
+  ]
+ },
+ "840-01": {
+  "estilo": "mao",
+  "semente": [
+   500,
+   750
+  ]
+ },
+ "841-01": {
+  "estilo": "maquina",
+  "semente": [
+   570,
+   570
+  ]
+ },
+ "841-02": {
+  "estilo": "led",
+  "semente": [
+   520,
+   670
+  ],
+  "tinta": "#ff3b30"
+ },
+ "841-03": {
+  "estilo": "marcador"
+ },
+ "841-04": {
+  "estilo": "carimbo",
+  "semente": [
+   400,
+   560
+  ],
+  "tol": 14
+ },
+ "841-05": {
+  "estilo": "serifa",
+  "semente": [
+   500,
+   620
+  ]
+ },
+ "842-01": {
+  "estilo": "marcador",
+  "caixa": [
+   260,
+   430,
+   800,
+   1050
+  ]
+ },
+ "843-01": {
+  "estilo": "impresso",
+  "semente": [
+   560,
+   600
+  ]
+ },
+ "843-02": {
+  "estilo": "impresso",
+  "semente": [
+   450,
+   670
+  ]
+ },
+ "843-03": {
+  "estilo": "caneta"
+ },
+ "843-04": {
+  "estilo": "marcador",
+  "semente": [
+   520,
+   700
+  ]
+ },
+ "843-05": {
+  "estilo": "impresso",
+  "semente": [
+   650,
+   560
+  ]
+ }
+}
