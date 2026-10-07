@@ -74,7 +74,12 @@ def main():
 
     arq.write_text(json.dumps(dados, ensure_ascii=False, indent=1))
     if erro_ins:
+        try:
+            ok = sorted(x['permission'] for x in get('me/permissions').get('data', []) if x.get('status') == 'granted')
+        except Exception as e:
+            ok = [f'(não deu para listar: {e})']
         print(f'::warning::Instagram não devolveu os números (insights): {erro_ins}')
+        print(f'::warning::Permissões da chave: {", ".join(ok)}')
 
 
 if __name__ == '__main__':
