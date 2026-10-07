@@ -3,7 +3,9 @@ name: Publicar post do dia
 on:
   schedule:
     - cron: '50 22 * * *'   # 19h50 em Brasília; o GitHub costuma atrasar alguns minutos, então sai perto das 20h
-    # Reservas: o GitHub às vezes pula um horário agendado. Se o post já saiu, estas rodadas não repetem (publicados.json).
+    # Reservas: o agendador grátis do GitHub atrasa de 1 a 3 horas e às vezes pula horários.
+    # O disparo principal é a tarefa agendada do Claude às 19h56. Estas rodadas só cobrem falhas:
+    # não repetem post já publicado (publicados.json) e não publicam antes da hora (trava em publicar.py).
     - cron: '7 23 * * *'    # 20h07
     - cron: '23 23 * * *'   # 20h23
     - cron: '41 23 * * *'   # 20h41

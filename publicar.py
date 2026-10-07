@@ -20,7 +20,18 @@ RAIZ = pathlib.Path(__file__).parent
 TOKEN = os.environ.get('META_TOKEN', '').strip()
 REPO = os.environ.get('GITHUB_REPOSITORY', 'levytikus/verdades-atemporais-posts')
 REF = os.environ.get('GITHUB_SHA', 'main')
-HOJE = datetime.datetime.now(ZoneInfo('America/Sao_Paulo')).date().isoformat()
+BR = ZoneInfo('America/Sao_Paulo')
+AGORA = datetime.datetime.now(BR)
+HOJE = AGORA.date().isoformat()
+# Margem antes do horário do post. Execuções antes disso não publicam nada.
+ANTECEDENCIA = datetime.timedelta(minutes=int(os.environ.get('ANTECEDENCIA_MIN', '15')))
+
+def na_hora(post):
+    """True se já chegou a hora do post (mesmo dia, a partir de hora - margem).
+    Execuções atrasadas do GitHub que caem depois da meia-noite não adiantam o post do dia seguinte."""
+    h, m = map(int, post.get('hora', '20:00').split(':'))
+    quando = datetime.datetime.fromisoformat(post['data']).replace(hour=h, minute=m, tzinfo=BR)
+    return AGORA >= quando - ANTECEDENCIA
 
 def api(method, path, token, **params):
     params['access_token'] = token
@@ -87,6 +98,11 @@ def main():
     posts = [p for p in fila if str(p['numero']) == numero] if numero else [p for p in fila if p['data'] == HOJE]
     if not posts:
         print('Nenhum post para hoje na fila.'); return
+    if not numero:
+        cedo = [p for p in posts if not na_hora(p)]
+        for p in cedo: print(f'Ainda não é hora do Nº {p["numero"]} ({p["data"]} {p.get("hora", "20:00")}); nada a fazer agora.')
+        posts = [p for p in posts if p not in cedo]
+        if not posts: return
     if os.environ.get('VERIFICAR') == '1':
         for p in posts: print(f'[teste] publicaria Nº {p["numero"]} ({len(p["imagens"])} imagem/ns) em {p["destinos"]}')
         print('Chave e contas OK.'); return
