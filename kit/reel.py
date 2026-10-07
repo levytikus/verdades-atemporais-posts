@@ -97,7 +97,7 @@ def gerar(imagens, numero, saida):
     cmd = ['ffmpeg', '-y', '-loglevel', 'error',
            '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
            '-ss', f'{inicio:.2f}', '-t', f'{total:.2f}', '-i', str(trilha),
-           '-filter_complex', f'[1:a]volume=0.9,afade=t=in:st=0:d=0.4,afade=t=out:st={total - 0.9:.2f}:d=0.9[a]',
+           '-filter_complex', f'[1:a]volume=0.8,afade=t=in:st=0:d=0.4,afade=t=out:st={total - 0.9:.2f}:d=0.9[a]',
            '-map', '0:v', '-map', '[a]',
            '-c:v', 'libx264', '-profile:v', 'high', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
            '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2',

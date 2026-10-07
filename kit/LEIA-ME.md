@@ -5,6 +5,8 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 ## Conteúdo
 
 - `gerar2.py`: gerador atual. Uso: `python3 gerar2.py lote.json cenas.json pasta_das_fotos pasta_de_saida` (`--debug` mostra a área detectada). Estilos de escrita: marcador, caneta, mão, lápis, giz de cera, máquina, recibo, carimbo, impresso, serifa, tela, pincel, batom, letreiro, giz, feltro, neon, led.
+- `reel.py`: transforma as imagens de um post num Reel vertical 1080×1920 com música (`python3 kit/reel.py 850` gera `posts/850-.../reel.mp4` a partir do fila.json). Requer ffmpeg, pillow e numpy.
+- `musicas/`: trilhas livres de direitos geradas para a página (o reel.py escolhe uma pelo número). Para acrescentar uma trilha: gerar no vidIQ e baixar com o workflow "Baixar trilha sonora".
 - `gerar.py`: gerador antigo (cenas fixas), usado até o Nº 820. Gera as imagens a partir de um lote em JSON. Uso: `python3 gerar.py lote.json pasta_de_saida`.
   Requer Python com `playwright` (com Chromium instalado), `opencv-python-headless`, `numpy` e `pillow`.
 - `bases/`: as 6 cenas limpas (placa, metro, placas, papel, outdoor, enter).
@@ -19,9 +21,14 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 - **Visual:** a frase aparece num objeto do mundo real (cena). Tipografia pesada em caixa alta, uma palavra marcada com a cor do post e uma linha de apoio menor. No topo aparece só o número (Nº 821), discreto.
 - **Cenas:** alternar entre placa, metro, placas, papel, outdoor e enter, sem repetir a mesma cena em posts seguidos. O enter serve para posts de interação ("complete a frase").
 - **Frases:** sempre originais. Nada de citações nem nome de autor nas imagens.
-- **Calendário:** 1 post por dia, todos os dias, às 20h (horário de Brasília). Cada lote semanal tem 7 posts.
-- **Formatos:** misturar carrosséis (4 a 6 slides) e posts únicos. Por semana, 2 ou 3 carrosséis e 1 ou 2 posts de interação.
-- **Legendas:** 3 a 6 linhas, tom próximo e reflexivo, uma pergunta ou chamada para salvar, comentar ou enviar, e 5 ou 6 hashtags começando por #verdadesatemporais.
+- **Estratégia (desde 07/10/2026): Reel primeiro.** A página tinha zero Reels e por isso não chegava a quem não segue. Agora são 2 publicações por dia:
+  - **12h · Reel de frase:** frase nova, numerada, uma cena só, publicada como Reel (`"video"` no fila.json, gerado com `reel.py`). Frases de identificação e contraste, escritas para serem enviadas a alguém.
+  - **20h · post da noite:** como antes (carrosséis e posts únicos). Post único sai como Reel (`"video"` + `"imagens"` de reserva); carrossel sai como carrossel.
+  - Cada lote semanal tem 14 itens: 7 Reels de frase (12h) + 7 posts da noite (20h). A numeração segue em ordem de publicação.
+- **Temas da fase de teste:** tempo e finitude (25%), quem fica nas fases difíceis (20%), julgamento e empatia (15%), caráter e valores (15%), aprovação e autenticidade (15%), maturidade e perdão a si mesmo (10%). Ajustar toda semana pelo `metricas.json` (dobrar o que tem mais compartilhamentos e alcance).
+- **Formatos da noite:** misturar carrosséis (4 a 6 slides) e posts únicos. Por semana, 2 ou 3 carrosséis e 1 ou 2 posts de interação.
+- **Reels:** nada de "ARRASTE →" nem "1/5" em imagem que vira Reel de cena única (use o rodapé "SALVA PRA LEMBRAR →" ou "MANDA PRA ALGUÉM →"). Nos Reels de carrossel o reel.py corta o rodapé sozinho.
+- **Legendas:** 3 a 6 linhas; nos Reels, a primeira linha é a própria frase (é o que aparece antes do "mais"), tom próximo e reflexivo, uma pergunta ou chamada para salvar, comentar ou enviar, e 5 ou 6 hashtags começando por #verdadesatemporais.
 
 ## Formato do lote (lote.json)
 
