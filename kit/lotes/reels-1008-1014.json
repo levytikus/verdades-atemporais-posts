@@ -1,0 +1,129 @@
+[
+ {
+  "numero": 1008,
+  "reel": true,
+  "cor": "laranja",
+  "slug": "reel-dias-que-atravessa",
+  "data": "2026-10-08",
+  "slides": [
+   {
+    "linhas": [
+     "Você vai sentir",
+     "falta de dias",
+     "que hoje está só",
+     "tentando"
+    ],
+    "destaque": "atravessar."
+   }
+  ]
+ },
+ {
+  "numero": 1009,
+  "reel": true,
+  "cor": "azul",
+  "slug": "reel-cabe-na-foto",
+  "data": "2026-10-09",
+  "slides": [
+   {
+    "linhas": [
+     "Nas fases boas,",
+     "todo mundo",
+     "cabe na foto.",
+     "Nas difíceis,",
+     "mal cabe alguém"
+    ],
+    "destaque": "na sala."
+   }
+  ]
+ },
+ {
+  "numero": 1010,
+  "reel": true,
+  "cor": "verde",
+  "slug": "reel-cem-anos",
+  "data": "2026-10-10",
+  "slides": [
+   {
+    "linhas": [
+     "Daqui a cem anos,",
+     "ninguém vai lembrar",
+     "do que você tinha.",
+     "Talvez lembrem de",
+     "como você tratava"
+    ],
+    "destaque": "as pessoas."
+   }
+  ]
+ },
+ {
+  "numero": 1011,
+  "reel": true,
+  "cor": "rosa",
+  "slug": "reel-aplauso",
+  "data": "2026-10-11",
+  "slides": [
+   {
+    "linhas": [
+     "Quem vive",
+     "esperando",
+     "aplauso esquece",
+     "de gostar da"
+    ],
+    "destaque": "própria música."
+   }
+  ]
+ },
+ {
+  "numero": 1012,
+  "reel": true,
+  "cor": "amarelo",
+  "slug": "reel-nao-era-fraco",
+  "data": "2026-10-12",
+  "slides": [
+   {
+    "linhas": [
+     "Você não era fraco.",
+     "Você só ainda",
+     "não sabia o que"
+    ],
+    "destaque": "sabe hoje."
+   }
+  ]
+ },
+ {
+  "numero": 1013,
+  "reel": true,
+  "cor": "azul bebê",
+  "slug": "reel-to-bem",
+  "data": "2026-10-13",
+  "slides": [
+   {
+    "linhas": [
+     "Ninguém sabe",
+     "o quanto custou",
+     "o seu"
+    ],
+    "destaque": "“tô bem”."
+   }
+  ]
+ },
+ {
+  "numero": 1014,
+  "reel": true,
+  "cor": "vermelho",
+  "slug": "reel-seus-pais",
+  "data": "2026-10-14",
+  "slides": [
+   {
+    "linhas": [
+     "Seus pais estão",
+     "envelhecendo",
+     "enquanto você",
+     "espera um momento",
+     "melhor para"
+    ],
+    "destaque": "visitar."
+   }
+  ]
+ }
+]

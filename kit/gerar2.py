@@ -265,8 +265,9 @@ async def gerar(lote, cenas, fotos, out, debug=False):
                 if debug:
                     d = np.array(img); cv2.polylines(d, [quad.astype(int).reshape(-1, 1, 2)], True, (255, 0, 0), 3)
                     cv2.polylines(d, [q2.astype(int).reshape(-1, 1, 2)], True, (0, 200, 255), 2); img = Image.fromarray(d)
-                marca = await shot(pg, out, html_marca(n, i, total), W, H, transparente=True)
-                img = img.convert('RGBA'); img.alpha_composite(marca); img = img.convert('RGB')
+                if not post.get('reel'):  # Reels não levam Nº nem rodapé (o reel.py escreve o @)
+                    marca = await shot(pg, out, html_marca(n, i, total), W, H, transparente=True)
+                    img = img.convert('RGBA'); img.alpha_composite(marca); img = img.convert('RGB')
                 f = out / f"{n}-{post.get('slug', 'post')}-{i:02d}.png"; img.save(f); arquivos.append(f)
             print('ok', n, post.get('slug'), cor, total)
         await b.close()

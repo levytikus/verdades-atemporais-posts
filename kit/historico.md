@@ -31,3 +31,13 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 - **Nº 841 · qui 29/10/2026 · tela do notebook, letreiro de LED, bloco de mesa, envelope kraft, cartão com relógio de bolso · laranja · carrossel 5:** Você não tem falta de tempo. Você tem excesso de distração. Uma hora rolando a tela vira uma semana. Proteja seu tempo como dinheiro. Seu tempo é a sua vida.
 - **Nº 842 · sex 30/10/2026 · copo de café · azul:** Seja gentil. Cada um carrega uma batalha
 - **Nº 843 · sáb 31/10/2026 · calendário de parede, ingresso, álbum de recordações, caixa de mudança, faixa puxada por avião · rosa · carrossel 5:** O mês acabou. Você não. Os dias difíceis passaram. O que não deu certo virou lição. Novembro não precisa de um novo você. Siga em frente, do seu jeito.
+
+## Reels de frase (12h, sem número, só na aba Reels)
+
+- **Reel · qui 08/10/2026 · varal ao entardecer · marcador:** Você vai sentir falta de dias que hoje está só tentando atravessar.
+- **Reel · sex 09/10/2026 · porta-retrato na estante · serifa:** Nas fases boas, todo mundo cabe na foto. Nas difíceis, mal cabe alguém na sala.
+- **Reel · sáb 10/10/2026 · placa de mármore em muro de pedra · impresso:** Daqui a cem anos, ninguém vai lembrar do que você tinha. Talvez lembrem de como você tratava as pessoas.
+- **Reel · dom 11/10/2026 · papel no piano de cauda · máquina:** Quem vive esperando aplauso esquece de gostar da própria música.
+- **Reel · seg 12/10/2026 · tela de projetor em sala escura · impresso:** Você não era fraco. Você só ainda não sabia o que sabe hoje.
+- **Reel · ter 13/10/2026 · papel sobre colcha de crochê · caneta:** Ninguém sabe o quanto custou o seu "tô bem".
+- **Reel · qua 14/10/2026 · folha na geladeira com ímãs · lápis:** Seus pais estão envelhecendo enquanto você espera um momento melhor para visitar.
