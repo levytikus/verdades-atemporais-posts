@@ -1,0 +1,96 @@
+[
+ {
+  "numero": 1015,
+  "reel": true,
+  "cor": "roxo",
+  "slug": "reel-amigo-de-verdade",
+  "data": "2026-10-15",
+  "slides": [
+   {
+    "linhas": [
+     "Amigo de",
+     "verdade não",
+     "some quando",
+     "você deixa"
+    ],
+    "destaque": "de ser útil."
+   }
+  ]
+ },
+ {
+  "numero": 1016,
+  "reel": true,
+  "cor": "amarelo trator",
+  "slug": "reel-educacao",
+  "data": "2026-10-16",
+  "slides": [
+   {
+    "linhas": [
+     "Educação não é",
+     "como você trata",
+     "quem te admira.",
+     "É como trata",
+     "quem te serve"
+    ],
+    "destaque": "o café."
+   }
+  ]
+ },
+ {
+  "numero": 1017,
+  "reel": true,
+  "cor": "rosa choque",
+  "slug": "reel-engoliu-calada",
+  "data": "2026-10-17",
+  "slides": [
+   {
+    "linhas": [
+     "Antes de julgar",
+     "a reação de",
+     "alguém, pergunte",
+     "quantas vezes ela"
+    ],
+    "destaque": "engoliu calada."
+   }
+  ]
+ },
+ {
+  "numero": 1018,
+  "reel": true,
+  "cor": "verde",
+  "slug": "reel-apelido",
+  "data": "2026-10-18",
+  "slides": [
+   {
+    "linhas": [
+     "Um dia vai ser",
+     "a última vez que",
+     "alguém te chama",
+     "pelo apelido",
+     "de infância."
+    ],
+    "destaque": "E ninguém vai avisar."
+   }
+  ]
+ },
+ {
+  "numero": 1019,
+  "reel": true,
+  "cor": "laranja",
+  "slug": "reel-chuva",
+  "data": "2026-10-19",
+  "slides": [
+   {
+    "linhas": [
+     "Quem fica",
+     "na chuva",
+     "com você",
+     "não pergunta",
+     "por que você",
+     "saiu sem"
+    ],
+    "destaque": "guarda-chuva."
+   }
+  ]
+ }
+]

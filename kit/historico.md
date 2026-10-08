@@ -41,3 +41,8 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 - **Reel · seg 12/10/2026 · tela de projetor em sala escura · impresso:** Você não era fraco. Você só ainda não sabia o que sabe hoje.
 - **Reel · ter 13/10/2026 · papel sobre colcha de crochê · caneta:** Ninguém sabe o quanto custou o seu "tô bem".
 - **Reel · qua 14/10/2026 · folha na geladeira com ímãs · lápis:** Seus pais estão envelhecendo enquanto você espera um momento melhor para visitar.
+- **Reel · qui 15/10/2026 · placa de madeira na porta de casa de praia · pincel:** Amigo de verdade não some quando você deixa de ser útil.
+- **Reel · sex 16/10/2026 · comanda no balcão do café · recibo:** Educação não é como você trata quem te admira. É como trata quem te serve o café.
+- **Reel · sáb 17/10/2026 · fita crepe em parede de concreto · marcador:** Antes de julgar a reação de alguém, pergunte quantas vezes ela engoliu calada.
+- **Reel · dom 18/10/2026 · caderno escolar antigo na carteira · lápis:** Um dia vai ser a última vez que alguém te chama pelo apelido de infância. E ninguém vai avisar.
+- **Reel · seg 19/10/2026 · painel do ponto de ônibus na chuva · impresso:** Quem fica na chuva com você não pergunta por que você saiu sem guarda-chuva.
