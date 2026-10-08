@@ -1,0 +1,42 @@
+name: Baixar cena
+
+# Baixa uma imagem (cena gerada no Canva) para kit/fotos-reels/<nome>.jpg.
+# Usado pelo Claude, porque o ambiente dele não acessa o endereço de download.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Endereço da imagem'
+        required: true
+      nome:
+        description: 'Nome do arquivo (sem extensão), ex.: r08'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: baixar-cena
+  cancel-in-progress: false
+
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar
+        env:
+          URL: ${{ github.event.inputs.url }}
+          NOME: ${{ github.event.inputs.nome }}
+        run: |
+          case "$NOME" in *[!a-z0-9-]*|'') echo "Nome inválido"; exit 1;; esac
+          mkdir -p kit/fotos-reels
+          code=$(curl -sSL -o "kit/fotos-reels/$NOME.jpg" -w '%{http_code}' "$URL")
+          echo "::notice::HTTP $code, $(stat -c %s kit/fotos-reels/$NOME.jpg) bytes, $(file -b kit/fotos-reels/$NOME.jpg)"
+          [ "$code" = 200 ] || exit 1
+          git config user.name "verdades-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "kit/fotos-reels/$NOME.jpg"
+          git commit -m "Cena $NOME"
+          git pull --rebase -q
+          git push
