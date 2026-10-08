@@ -1,0 +1,74 @@
+[
+ {
+  "numero": 1020,
+  "reel": true,
+  "cor": "azul",
+  "slug": "reel-se-entender",
+  "data": "2026-10-20",
+  "slides": [
+   {
+    "linhas": [
+     "Você não precisa",
+     "ser entendido",
+     "por todo mundo.",
+     "Só não pode",
+     "deixar de"
+    ],
+    "destaque": "se entender."
+   }
+  ]
+ },
+ {
+  "numero": 1021,
+  "reel": true,
+  "cor": "vermelho",
+  "slug": "reel-palavra-cumprida",
+  "data": "2026-10-21",
+  "slides": [
+   {
+    "linhas": [
+     "Palavra",
+     "cumprida",
+     "vale mais",
+     "que promessa"
+    ],
+    "destaque": "bonita."
+   }
+  ]
+ },
+ {
+  "numero": 1022,
+  "reel": true,
+  "cor": "azul bebê",
+  "slug": "reel-bem-de-longe",
+  "data": "2026-10-22",
+  "slides": [
+   {
+    "linhas": [
+     "Todo mundo",
+     "parece bem"
+    ],
+    "destaque": "de longe."
+   }
+  ]
+ },
+ {
+  "numero": 1023,
+  "reel": true,
+  "cor": "amarelo",
+  "slug": "reel-o-que-vao-dizer",
+  "data": "2026-10-23",
+  "slides": [
+   {
+    "linhas": [
+     "O tempo",
+     "que você",
+     "gasta com",
+     "o que vão",
+     "dizer"
+    ],
+    "destaque": "não volta."
+   }
+  ]
+ }
+]

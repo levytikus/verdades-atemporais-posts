@@ -46,3 +46,7 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 - **Reel · sáb 17/10/2026 · fita crepe em parede de concreto · marcador:** Antes de julgar a reação de alguém, pergunte quantas vezes ela engoliu calada.
 - **Reel · dom 18/10/2026 · caderno escolar antigo na carteira · lápis:** Um dia vai ser a última vez que alguém te chama pelo apelido de infância. E ninguém vai avisar.
 - **Reel · seg 19/10/2026 · painel do ponto de ônibus na chuva · impresso:** Quem fica na chuva com você não pergunta por que você saiu sem guarda-chuva.
+- **Reel · ter 20/10/2026 · papel vegetal na mesa de luz · caneta:** Você não precisa ser entendido por todo mundo. Só não pode deixar de se entender.
+- **Reel · qua 21/10/2026 · etiqueta kraft num pote de geleia · mão:** Palavra cumprida vale mais que promessa bonita.
+- **Reel · qui 22/10/2026 · janela embaçada do ônibus à noite · mão:** Todo mundo parece bem de longe.
+- **Reel · sex 23/10/2026 · cartão no relógio de ponto · máquina:** O tempo que você gasta com o que vão dizer não volta.
