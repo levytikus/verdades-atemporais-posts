@@ -1,0 +1,40 @@
+[
+ {
+  "numero": 1027,
+  "reel": true,
+  "cor": "verde",
+  "slug": "reel-explicacao",
+  "data": "2026-10-27",
+  "slides": [
+   {
+    "linhas": [
+     "Você não deve",
+     "explicação a",
+     "quem só procura",
+     "motivo para"
+    ],
+    "destaque": "criticar."
+   }
+  ]
+ },
+ {
+  "numero": 1028,
+  "reel": true,
+  "cor": "laranja",
+  "slug": "reel-amadurecer",
+  "data": "2026-10-28",
+  "slides": [
+   {
+    "linhas": [
+     "Amadurecer é",
+     "parar de",
+     "se culpar",
+     "pelo que",
+     "você não",
+     "tinha"
+    ],
+    "destaque": "como saber."
+   }
+  ]
+ }
+]

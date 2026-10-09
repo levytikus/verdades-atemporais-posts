@@ -53,3 +53,5 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 - **Reel · sáb 24/10/2026 · etiqueta na guia do cachorro, ao lado da porta · caneta:** Leal não é quem mais fala de lealdade. É quem nunca precisou falar.
 - **Reel · dom 25/10/2026 · diário de viagem na cama de hotel · caneta:** Hoje é o "um dia" que você tanto esperou. Repara nele.
 - **Reel · seg 26/10/2026 · caixa de doação na porta de casa · marcador:** Ser gentil com quem não pode te dar nada diz tudo sobre você.
+- **Reel · ter 27/10/2026 · dicionário antigo aberto no atril · caneta:** Você não deve explicação a quem só procura motivo para criticar.
+- **Reel · qua 28/10/2026 · caderno de aquarela com pincel e tintas · mão:** Amadurecer é parar de se culpar pelo que você não tinha como saber.
