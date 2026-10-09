@@ -50,3 +50,6 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 - **Reel · qua 21/10/2026 · etiqueta kraft num pote de geleia · mão:** Palavra cumprida vale mais que promessa bonita.
 - **Reel · qui 22/10/2026 · janela embaçada do ônibus à noite · mão:** Todo mundo parece bem de longe.
 - **Reel · sex 23/10/2026 · cartão no relógio de ponto · máquina:** O tempo que você gasta com o que vão dizer não volta.
+- **Reel · sáb 24/10/2026 · etiqueta na guia do cachorro, ao lado da porta · caneta:** Leal não é quem mais fala de lealdade. É quem nunca precisou falar.
+- **Reel · dom 25/10/2026 · diário de viagem na cama de hotel · caneta:** Hoje é o "um dia" que você tanto esperou. Repara nele.
+- **Reel · seg 26/10/2026 · caixa de doação na porta de casa · marcador:** Ser gentil com quem não pode te dar nada diz tudo sobre você.

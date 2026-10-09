@@ -1,0 +1,58 @@
+[
+ {
+  "numero": 1024,
+  "reel": true,
+  "cor": "roxo",
+  "slug": "reel-leal",
+  "data": "2026-10-24",
+  "slides": [
+   {
+    "linhas": [
+     "Leal não é",
+     "quem mais",
+     "fala de",
+     "lealdade.",
+     "É quem",
+     "nunca precisou"
+    ],
+    "destaque": "falar."
+   }
+  ]
+ },
+ {
+  "numero": 1025,
+  "reel": true,
+  "cor": "verde limão",
+  "slug": "reel-um-dia",
+  "data": "2026-10-25",
+  "slides": [
+   {
+    "linhas": [
+     "Hoje é o",
+     "“um dia” que",
+     "você tanto",
+     "esperou."
+    ],
+    "destaque": "Repara nele."
+   }
+  ]
+ },
+ {
+  "numero": 1026,
+  "reel": true,
+  "cor": "rosa",
+  "slug": "reel-gentil",
+  "data": "2026-10-26",
+  "slides": [
+   {
+    "linhas": [
+     "Ser gentil com",
+     "quem não pode",
+     "te dar nada",
+     "diz tudo"
+    ],
+    "destaque": "sobre você."
+   }
+  ]
+ }
+]
