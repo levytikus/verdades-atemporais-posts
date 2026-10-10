@@ -55,3 +55,6 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 - **Reel · seg 26/10/2026 · caixa de doação na porta de casa · marcador:** Ser gentil com quem não pode te dar nada diz tudo sobre você.
 - **Reel · ter 27/10/2026 · dicionário antigo aberto no atril · caneta:** Você não deve explicação a quem só procura motivo para criticar.
 - **Reel · qua 28/10/2026 · caderno de aquarela com pincel e tintas · mão:** Amadurecer é parar de se culpar pelo que você não tinha como saber.
+- **Reel · qui 29/10/2026 · bloco ao lado de luminária acesa de madrugada · caneta:** Você vê o resultado. Não viu as noites.
+- **Reel · sex 30/10/2026 · placa branca em estrada de terra ao pôr do sol · marcador:** A pressa de chegar faz a gente esquecer que o caminho também é a vida.
+- **Reel · sáb 31/10/2026 · livro de visitas numa mesa de festa · caneta:** Quem vai com você até o fim nem sempre estava lá no começo.

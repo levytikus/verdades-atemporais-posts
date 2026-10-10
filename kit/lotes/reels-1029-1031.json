@@ -1,0 +1,55 @@
+[
+ {
+  "numero": 1029,
+  "reel": true,
+  "cor": "azul",
+  "slug": "reel-noites",
+  "data": "2026-10-29",
+  "slides": [
+   {
+    "linhas": [
+     "Você vê o",
+     "resultado.",
+     "Não viu"
+    ],
+    "destaque": "as noites."
+   }
+  ]
+ },
+ {
+  "numero": 1030,
+  "reel": true,
+  "cor": "rosa",
+  "slug": "reel-caminho",
+  "data": "2026-10-30",
+  "slides": [
+   {
+    "linhas": [
+     "A pressa de",
+     "chegar faz a",
+     "gente esquecer",
+     "que o caminho",
+     "também"
+    ],
+    "destaque": "é a vida."
+   }
+  ]
+ },
+ {
+  "numero": 1031,
+  "reel": true,
+  "cor": "amarelo",
+  "slug": "reel-fim",
+  "data": "2026-10-31",
+  "slides": [
+   {
+    "linhas": [
+     "Quem vai com você",
+     "até o fim",
+     "nem sempre estava"
+    ],
+    "destaque": "lá no começo."
+   }
+  ]
+ }
+]
