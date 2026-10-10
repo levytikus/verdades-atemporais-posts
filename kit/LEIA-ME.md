@@ -18,8 +18,8 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 
 - **Numeração:** continua a contagem do Instagram. O último post pronto é o Nº 843.
 - **Cor de destaque:** cada post tem uma cor, sempre nesta ordem: verde, laranja, azul, rosa, amarelo, vermelho, verde limão, azul bebê, roxo, amarelo trator, rosa choque, e depois recomeça. O 815 foi roxo, então o 821 é rosa, o 822 amarelo e o 823 vermelho. O `gerar.py` calcula a cor sozinho a partir do número.
-- **Regra de ouro (desde o Nº 821):** nenhuma cena repetida entre posts. Cada post tem uma cena inédita, gerada no Canva, com um objeto do mundo real diferente (bilhete, lousa, neon, etiqueta, espelho, painel de aeroporto...).
-- **Carrosséis (regra do Levy, desde 08/10/2026):** todos os slides usam a MESMA cena, mudando só o texto. Dá unidade ao carrossel e economiza a cota de IA do Canva (cerca de 200 gerações por mês no Pro). No `cenas-*.json`, os slides do mesmo post apontam para a mesma foto (copie o arquivo para `{numero}-01`, `{numero}-02`...) e repetem a mesma `caixa`. As fotos antigas de `bases/` servem só de inspiração. Use `gerar2.py` com um `cenas-*.json` (estilo de escrita por slide) e a pasta com as fotos exportadas do Canva.
+- **Regra de ouro (desde o Nº 821):** nenhuma cena repetida entre posts. Cada post tem uma cena inédita, gerada no ChatGPT pelo Levy (veja "Cenas pelo ChatGPT" abaixo), com um objeto do mundo real diferente (bilhete, lousa, neon, etiqueta, espelho, painel de aeroporto...).
+- **Carrosséis (regra do Levy, desde 08/10/2026):** todos os slides usam a MESMA cena, mudando só o texto. Dá unidade ao carrossel e reduz o número de imagens a gerar. No `cenas-*.json`, os slides do mesmo post apontam para a mesma foto (copie o arquivo para `{numero}-01`, `{numero}-02`...) e repetem a mesma `caixa`. As fotos antigas de `bases/` servem só de inspiração. Use `gerar2.py` com um `cenas-*.json` (estilo de escrita por slide) e a pasta com as fotos das cenas.
 - **Visual:** a frase aparece num objeto do mundo real (cena). Tipografia pesada em caixa alta, uma palavra marcada com a cor do post e uma linha de apoio menor. No topo aparece só o número (Nº 821), discreto.
 - **Cenas:** alternar entre placa, metro, placas, papel, outdoor e enter, sem repetir a mesma cena em posts seguidos. O enter serve para posts de interação ("complete a frase").
 - **Frases:** sempre originais. Nada de citações nem nome de autor nas imagens.
@@ -49,3 +49,13 @@ Pasta usada pelo processo semanal para gerar os posts do @verdades_atemporais.
 ```
 
 Linhas curtas funcionam melhor (até uns 12 caracteres): o texto é ajustado para ocupar o espaço, e linhas longas deixam a letra pequena.
+
+
+## Cenas pelo ChatGPT (regra do Levy, desde 10/10/2026)
+
+As cenas do Verdades Atemporais NÃO são mais geradas no Canva (a cota de IA do Canva fica para o canal Curiosidades Todo Dia e para os jogos). O fluxo é:
+
+1. Com as frases do lote prontas, escreva um prompt por cena em `kit/lotes/prompts-<primeiro>-<último>.md` e mande para o Levy na conversa, numerados e com o nome do arquivo de cada um (ex.: `r01 · Reel 01/11`, `844 · feed 01/11`).
+2. Modelo de prompt (em português, um bloco por cena): "Foto realista, formato vertical 4:5. <objeto real> visto de frente, com uma superfície grande e totalmente em branco ocupando boa parte do centro da imagem (nada escrito nela). <ambiente, luz e clima que combinam com a frase>. Sem nenhum texto, letra ou número em lugar nenhum da imagem." Deixe a superfície em branco no meio da foto, longe das bordas (o gerador corta para 4:5).
+3. O Levy gera no ChatGPT e devolve as imagens anexadas na conversa, na ordem dos prompts. Copie cada uma para `kit/fotos-reels/<nome>.jpg` (Reels) ou para a pasta de fotos do lote (feed) e siga o processo normal: `gerar2.py`, `reel.py`, `story.py`, fila, histórico, commit e push.
+4. Se alguma imagem vier com texto escrito, superfície pequena ou fora do pedido, diga qual e mande um prompt corrigido só para ela.
