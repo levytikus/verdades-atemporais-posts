@@ -157,3 +157,84 @@ def faixa_escura(img, centro, altura=520, forca=0.38):
     ys = np.arange(a.shape[0])[:, None]
     m = np.exp(-((ys - centro) / (altura / 2.2)) ** 2) * forca
     return Image.fromarray(np.clip(a * (1 - m[..., None]), 0, 255).astype('uint8'))
+
+
+FONTES['amatic'] = os.path.join(_F, 'AmaticSC-Bold.ttf')
+FONTES['marker'] = os.path.join(_F, 'PermanentMarker.ttf')
+
+
+def _linha_mao(texto, alvo_w, fonte_nome, seed, cor, max_h=None):
+    """Desenha uma linha de letras à mão com tamanho e inclinação levemente irregulares."""
+    import random
+    rnd = random.Random(seed)
+    base = 200
+    letras = []
+    for ch in texto:
+        if ch == ' ':
+            letras.append((' ', None, 0, 0))
+            continue
+        tam = int(base * rnd.uniform(0.9, 1.1))
+        letras.append((ch, ImageFont.truetype(FONTES[fonte_nome], tam), rnd.uniform(-4, 4), rnd.uniform(-8, 8)))
+    # mede
+    tmp = ImageDraw.Draw(Image.new('L', (10, 10)))
+    pecas, x = [], 0
+    for ch, f, rot, dy in letras:
+        if f is None:
+            x += base * 0.28
+            continue
+        bb = tmp.textbbox((0, 0), ch, font=f)
+        if ch in '.,;:!?”"\'' and pecas:
+            x -= base * 0.07
+        w, h = bb[2] - bb[0] + 20, int(base * 1.6)
+        m = Image.new('L', (w, h), 0)
+        ImageDraw.Draw(m).text((10 - bb[0], int(base * 0.25)), ch, font=f, fill=255)
+        m = m.rotate(rot, resample=Image.BICUBIC, expand=False)
+        pecas.append((x, dy, m))
+        x += bb[2] - bb[0] + base * 0.03
+    W0 = int(x) + 20
+    H0 = int(base * 1.8)
+    mask = Image.new('L', (W0, H0), 0)
+    for px, dy, m in pecas:
+        mask.paste(255, (int(px), int(dy + base * 0.1)), m)
+    mask = mask.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(1.2))
+    bb = mask.getbbox()
+    mask = mask.crop(bb)
+    if alvo_w < 0:  # altura fixa em px
+        s = -alvo_w / mask.height
+        return mask.resize((max(1, int(mask.width * s)), max(1, int(mask.height * s))), Image.LANCZOS)
+    s = alvo_w / mask.width
+    if max_h and mask.height * s > max_h:
+        s = max_h / mask.height
+    return mask.resize((max(1, int(mask.width * s)), max(1, int(mask.height * s))), Image.LANCZOS)
+
+
+def letreiro(img, linhas, x0, y0, largura, cor=(29, 26, 23), alinhamento='esq', espaco=14, seed=1,
+             textura=True):
+    """Título em letras à mão empilhadas, cada linha esticada para a largura do bloco
+    linhas: lista de (texto, altura da letra em px); palavras curtas pequenas, palavras-chave grandes."""
+    import numpy as np
+    camadas, y = [], y0
+    for k, (txt, alt) in enumerate(linhas):
+        m = _linha_mao(txt.upper(), -int(alt), 'amatic', seed * 31 + k, cor)
+        if m.width > largura:
+            m = m.resize((largura, int(m.height * largura / m.width)), Image.LANCZOS)
+        if alinhamento == 'esq':
+            x = x0
+        elif alinhamento == 'dir':
+            x = x0 + largura - m.width
+        else:
+            x = x0 + (largura - m.width) // 2
+        camadas.append((x, y, m))
+        y += m.height + espaco
+    base = img.convert('RGBA')
+    for x, yy, m in camadas:
+        if textura:
+            rng = np.random.default_rng(seed + yy)
+            a = np.asarray(m).astype('float32') / 255
+            ruido = rng.random(a.shape)
+            a = a * np.where(ruido < 0.025, 0.6, 1.0)
+            m = Image.fromarray((a * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(0.6))
+        tinta = Image.new('RGBA', m.size, cor + (255,))
+        tinta.putalpha(m)
+        base.alpha_composite(tinta, (int(x), int(yy)))
+    return base.convert('RGB'), y
