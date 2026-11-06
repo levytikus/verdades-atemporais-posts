@@ -19,6 +19,16 @@ Mesmo roteiro da metáfora, mas em pintura de guache com cenas de casa brasileir
 - Título: letras à mão empilhadas (`letreiro`, fonte Amatic SC Bold engrossada, leve irregularidade por letra), tinta quase preta; em cena noturna, creme.
 - Exemplo pronto: `saida/ilustrada-limite/`.
 
+### 1c. LOTE de carrosséis ilustrados (`carrossel_lote.py` + `lote_nov06.py`)
+Mesmo visual da 1b, mas cada carrossel com um tom e uma mecânica diferente, para a página não ficar repetitiva.
+Feito em 06/11/2026 a partir dos formatos que mais circulam: humor de identificação, nostalgia de família,
+virada "de fora parece sorte", narrativa afetiva, trend "Sim, mas…" e lista de validação.
+- `LOTE` no script: nome → (prefixo das imagens, linhas do letreiro por slide). 6 slides cada.
+- Imagens do Gemini com personagem fixo descrito em todas as cenas (roupa, cabelo, idade) para manter a continuidade.
+- `python3 carrossel_lote.py <nome>` gera em `saida/lote-<nome>/`; `python3 lote_nov06.py <nome>` copia para `posts/` e põe na fila.
+- Legenda: gancho nas primeiras linhas, pergunta para comentário, "manda pra…", no máximo 5 hashtags (limite do Instagram desde set/2026).
+- Horários pedidos pelo Levy: 12h, 18h e 21h. O GitHub só roda perto de 12h e 20h, então o disparo nesses horários é feito pelo Claude (workflow manual com o número).
+
 ### 2. Carrossel LISTA COM VIRADA (`carrossel_lista.py`)
 Inspiração: listas "Tema: resposta curta" sobre paisagem.
 - Abre com pergunta, cada slide traz **Rótulo:** + resposta curta, fecha devolvendo a pergunta e com o "manda pra quem".
