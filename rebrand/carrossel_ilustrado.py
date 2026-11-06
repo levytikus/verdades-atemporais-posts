@@ -15,8 +15,8 @@ CREME = (246, 237, 220)
 
 # imagem, linhas do título (texto, altura da letra), alinhamento
 SLIDES = [
-    ('va-ilu-01', [('frases de quem já', 44), ('passou do limite:', 44), ('', 14),
-                   ('“pode deixar', 96), ('comigo.”', 120)], 'centro'),
+    ('va-ilu-01', [('frases de quem já passou do limite:', 40), ('', 10),
+                   ('“pode deixar comigo.”', 92)], 'centro'),
     ('va-ilu-02', [('“tô de', 125), ('boa.”', 175)], 'centro'),
     ('va-ilu-03', [('“não precisa,', 96), ('eu me', 60), ('viro.”', 128)], 'centro'),
     ('va-ilu-04', [('“foi só um', 115), ('dia ruim.”', 145)], 'centro'),
@@ -31,7 +31,7 @@ SLIDES = [
 def escolher(nome):
     """Usa a versão refeita (sufixo b) quando existir."""
     n = nome.split('-')[-1]
-    for cand in (f'va-ilu-r{n}.png', f'{nome}b.png', f'{nome}.png'):
+    for cand in (f'va-ilu-c{n}.png', f'va-ilu-a{n}.png', f'va-ilu-r{n}.png', f'{nome}b.png', f'{nome}.png'):
         p = os.path.join(FOTOS, cand)
         if os.path.exists(p):
             return p
