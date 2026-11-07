@@ -27,6 +27,7 @@ virada "de fora parece sorte", narrativa afetiva, trend "Sim, mas…" e lista de
 - Imagens do Gemini com personagem fixo descrito em todas as cenas (roupa, cabelo, idade) para manter a continuidade.
 - `python3 carrossel_lote.py <nome>` gera em `saida/lote-<nome>/`; `python3 lote_nov06.py <nome>` copia para `posts/` e põe na fila.
 - Legenda: gancho nas primeiras linhas, pergunta para comentário, "manda pra…", no máximo 5 hashtags (limite do Instagram desde set/2026).
+- Direção do Levy (07/11/2026): gostou da qualidade do lote. Daqui pra frente, variar os temas puxando o que está em alta nos perfis concorrentes; o carrossel NÃO precisa ser história linear (pode ser lista solta, cenas independentes, frase única, tipos de pessoa, interação). Alternar formatos e tons de forma diversa e imprevisível, sem sequência fixa.
 - Horários pedidos pelo Levy: 12h, 18h e 21h. O GitHub só roda perto de 12h e 20h, então o disparo nesses horários é feito pelo Claude (workflow manual com o número).
 
 ### 2. Carrossel LISTA COM VIRADA (`carrossel_lista.py`)
