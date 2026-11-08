@@ -20,7 +20,7 @@ ESTILO = ("vertical 4:5 (1080x1350), hand-painted gouache illustration, flat mat
           "texture, contemporary Brazilian editorial poster painted by hand, soft painted shadows, simplified figures "
           "with very simple expressive faces, diverse Brazilian people. The painting must fill the ENTIRE canvas "
           "edge to edge: NO blank band, NO white or plain border, NO paper margin anywhere. The scene sits in the lower two "
-          "thirds; the whole upper third is a plain painted wall or plain painted sky (soft brush texture), calm and empty. "
+          "thirds; the upper third is simply the SAME wall or the SAME sky of the scene continuing upward to the top edge, same color, texture and wallpaper, free of objects, with NO horizontal line, NO edge, NO strip, NO band and NO separate block of color across the image. Any split-screen divider, window, curtain rod or flying object stays in the lower two thirds. "
           "NO text, NO letters, NO numbers, NO signature, NO watermark, NO readable screens or signs.")
 
 # Cada categoria tem paleta, mundo, elenco e objetos próprios (pedido do Levy em 07/11/2026).

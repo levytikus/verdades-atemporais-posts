@@ -1376,6 +1376,22 @@
   "legenda": "Pote de sorvete com feijão, paninho de crochê em cima da TV e aquele \"come mais\" que não aceita não como resposta. Casa de vó é patrimônio.\n\nO que mais tinha na casa da sua vó? Conta aqui. 🤍\n\n#casadevó #vó #nostalgia #infância #verdadesatemporais"
  },
  {
+  "numero": "rb-022",
+  "chave": "rb-022",
+  "data": "2026-11-12",
+  "hora": "21:00",
+  "destinos": [
+   "instagram",
+   "facebook"
+  ],
+  "imagens": [
+   "posts/rb-022-fase/01.jpg",
+   "posts/rb-022-fase/02.jpg",
+   "posts/rb-022-fase/03.jpg"
+  ],
+  "legenda": "Se você está numa fase difícil, lembra: fase é fase. Ela tem começo, meio e fim, mesmo quando o meio parece não acabar.\n\nManda pra alguém que precisa ler isso hoje. 🤍\n\n#fasedifícil #esperança #saúdemental #reflexão #verdadesatemporais"
+ },
+ {
   "numero": "rb-021",
   "chave": "rb-021",
   "data": "2026-11-12",
@@ -1392,21 +1408,5 @@
    "posts/rb-021-trabalho/05.jpg"
   ],
   "legenda": "Reunião rapidinha que vira duas horas, marmita vazada e o salário que entra e sai no mesmo dia. Quem trabalha sabe.\n\nMarca aquele colega que vive isso com você. 😂\n\n#trabalho #clt #humor #vidaadulta #verdadesatemporais"
- },
- {
-  "numero": "rb-022",
-  "chave": "rb-022",
-  "data": "2026-11-12",
-  "hora": "21:00",
-  "destinos": [
-   "instagram",
-   "facebook"
-  ],
-  "imagens": [
-   "posts/rb-022-fase/01.jpg",
-   "posts/rb-022-fase/02.jpg",
-   "posts/rb-022-fase/03.jpg"
-  ],
-  "legenda": "Se você está numa fase difícil, lembra: fase é fase. Ela tem começo, meio e fim, mesmo quando o meio parece não acabar.\n\nManda pra alguém que precisa ler isso hoje. 🤍\n\n#fasedifícil #esperança #saúdemental #reflexão #verdadesatemporais"
  }
 ]
