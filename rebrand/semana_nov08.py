@@ -17,12 +17,58 @@ CREME = (246, 237, 220)
 _ = ('', 12)
 
 ESTILO = ("vertical 4:5 (1080x1350), hand-painted gouache illustration, flat matte color shapes with visible dry brush "
-          "texture, contemporary Brazilian editorial poster painted by hand, warm palette (terracotta, ochre, peach, sand, "
-          "cobalt blue, leaf green), soft painted shadows, simplified figures with brown skin tones and very simple "
-          "expressive faces, everyday working-class settings of a Brazilian town. The painting must fill the ENTIRE canvas "
+          "texture, contemporary Brazilian editorial poster painted by hand, soft painted shadows, simplified figures "
+          "with very simple expressive faces, diverse Brazilian people. The painting must fill the ENTIRE canvas "
           "edge to edge: NO blank band, NO white or plain border, NO paper margin anywhere. The scene sits in the lower two "
           "thirds; the whole upper third is a plain painted wall or plain painted sky (soft brush texture), calm and empty. "
           "NO text, NO letters, NO numbers, NO signature, NO watermark, NO readable screens or signs.")
+
+# Cada categoria tem paleta, mundo, elenco e objetos próprios (pedido do Levy em 07/11/2026).
+# A técnica (guache) é a assinatura comum da página; o resto muda de categoria pra categoria.
+CAT = {
+ 'humor': dict(nome='Humor do dia a dia', tinta=(27, 24, 48),
+   paleta='bold saturated pop colors: tomato red, sunflower yellow, turquoise, bubblegum pink and cobalt blue, crisp contrast',
+   mundo='big Brazilian city life today: small rented apartments, crowded buses, offices, street corners, bakeries, convenience stores',
+   elenco='young urban adults (20 to 35) with exaggerated comic expressions and lively body language, trendy everyday clothes',
+   objetos='modern everyday things: phones, chargers, delivery bags, bills, snacks, sneakers'),
+ 'nostalgia': dict(nome='Nostalgia', tinta=(66, 42, 26),
+   paleta='faded vintage tones like an old 1990s photograph: mustard, olive green, coffee brown, faded teal and yellowed cream, with soft film grain',
+   mundo='1990s Brazilian homes: grandma\'s house, tiled floors, backyards with clotheslines, old kitchens',
+   elenco='grandparents, aunts, uncles and children, people in 1990s clothes',
+   objetos='tube TV, landline phone, clay water filter, crochet doilies, enamel mugs, photo albums'),
+ 'acolhimento': dict(nome='Acolhimento', tinta=(246, 237, 220),
+   paleta='deep night blues, indigo and soft violet, with warm golden lamp or window light as the only warm color',
+   mundo='bedrooms, windows, quiet streets and rooftops at night or at the first light of dawn',
+   elenco='one person alone, introspective, in comfortable home clothes',
+   objetos='bedside lamps, curtains, mugs, blankets, the moon'),
+ 'validacao': dict(nome='Limites e amadurecimento', tinta=(30, 52, 40),
+   paleta='calm airy muted tones: sage green, sand, warm off-white, soft clay and pale sky blue, lots of breathing space',
+   mundo='bright simple homes full of plants, morning light, quiet parks and verandas',
+   elenco='adults between 30 and 50, serene and grounded, natural posture, linen and cotton clothes',
+   objetos='plants, tea cups, books, hammocks, open windows'),
+ 'afeto': dict(nome='Afeto', tinta=(92, 28, 42),
+   paleta='rosy warm tones: dusty pink, coral, wine red, peach and warm amber light',
+   mundo='cozy kitchens, sofas, porches, small cafés and neighborhood stairs',
+   elenco='couples, friends and neighbors interacting with tenderness and touch',
+   objetos='shared food, coffee, radios, handwritten notes, string lights'),
+ 'motivacao': dict(nome='Seguir em frente', tinta=(22, 36, 72),
+   paleta='open nature colors: emerald green, wide sky blue, sunrise orange and golden yellow',
+   mundo='wide open spaces: red dirt roads, hills, valleys, open skies, big windows facing the horizon',
+   elenco='small figures in a big space, travelers and students walking forward',
+   objetos='backpacks, roads, sunrise, flowers by the road'),
+ 'causa': dict(nome='Novembro Azul', tinta=(16, 34, 78),
+   paleta='shades of blue (navy, cobalt, sky blue) with white and warm skin tones',
+   mundo='real everyday places: a clinic, a riverbank, a backyard, an old pickup truck',
+   elenco='men of different ages, fathers and sons, friends',
+   objetos='caps, fishing rods, appointment cards, blue shirts'),
+}
+CATEGORIA = {
+ 'enem': 'motivacao', 'familia': 'humor', 'domingo': 'acolhimento', 'pequenas': 'afeto', 'frescura': 'validacao',
+ 'completa': 'nostalgia', 'planos': 'humor', 'tempo': 'motivacao', 'amor': 'afeto', 'issoaquilo': 'humor',
+ 'azul': 'causa', 'some': 'acolhimento', 'avo': 'nostalgia', 'trabalho': 'humor', 'fase': 'acolhimento',
+ 'sexta13': 'humor', 'gente': 'afeto', 'dinheiro': 'humor', 'permissao': 'validacao', 'casal': 'humor', 'ano': 'acolhimento',
+}
+PREFIXO = 'vb'  # imagens novas (com categoria): vb-<chave>NN; as antigas va-<chave>NN ficam de reserva
 
 # chave, número, data, hora, ideia, elenco, slides [(linhas, cena)], legenda
 POSTS = [
@@ -30,11 +76,11 @@ POSTS = [
   'a short encouraging letter to a student on the day of the national university entrance exam (ENEM)',
   'Julia, 17, brown skin, curly black hair in a puff, big round glasses, white T-shirt, a transparent pencil case.', [
   ([('pra quem vai fazer', 85), ('o enem hoje:', 120)],
-   'early morning kitchen, Julia eating breakfast nervously, transparent pencil case and ID card on the table, her mother\'s hand placing a cup of coffee beside her.'),
+   'sunrise, Julia at the door of her simple house on a hill, backpack on, holding her transparent pencil case to her chest, looking at the wide orange sky, nervous but brave.'),
   ([('você não é', 112), ('uma nota.', 132)],
-   'sunny street, Julia walking toward a school gate among many other students, taking a deep calm breath.'),
+   'Julia walking up a road toward a school at the top of a green hill, many other students walking too, huge open blue sky, she breathes deeply.'),
   ([('respira, lê com calma', 72), ('e lembra do quanto', 72), ('você já chegou.', 96), _, ('manda pra quem vai fazer a prova', 40)],
-   'classroom during an exam, Julia smiling calmly with her pen, sunlight from the window, other students in rows.'),
+   'classroom during an exam with a huge open window facing green hills and blue sky, Julia smiling calmly with her pen.'),
  ], "Hoje é dia de ENEM. Se você vai fazer a prova: respira, lê com calma e confia no que você estudou. Nenhuma nota diz quem você é.\n\n"
     "Manda pra alguém que vai fazer a prova hoje e deixa um \"boa prova\" aqui nos comentários. 🤍\n\n"
     "#enem2026 #enem #vestibular #boaprova #verdadesatemporais"),
@@ -93,12 +139,12 @@ POSTS = [
     "Qual desses você já ouviu que era frescura? Conta aqui embaixo. 🤍\n\n"
     "#limites #autoestima #saúdemental #respeito #verdadesatemporais"),
 
- ('completa', 'rb-013', '2026-11-09', '21:00', 'interactive "complete the sentence" post at night',
-  'Rosa, 35, brown skin, long wavy black hair, mustard cardigan.', [
+ ('completa', 'rb-013', '2026-11-09', '21:00', 'interactive "complete the sentence" post about nostalgia',
+  'Rosa, 35, light brown skin, long wavy black hair, mustard cardigan.', [
   ([('complete:', 122), _, ('“eu era mais', 96), ('feliz quando…”', 100)],
-   'night, Rosa sitting on a flat rooftop slab (laje) under warm string lights, looking at the lights of the neighborhood, contemplative; deep blue night sky.'),
+   'Rosa sitting at her grandmother\'s old kitchen table looking through a photo album of the 1990s, an enamel mug, a clay water filter and a tube TV in the background, nostalgic smile.'),
   ([('a gente lê', 92), ('todas as respostas.', 86), _, ('responde aqui embaixo', 50)],
-   'night, Rosa on the same rooftop smiling while reading her phone, a cup of tea in her other hand, string lights; deep blue night sky.'),
+   'a 1990s backyard memory: children playing with a garden hose under a clothesline full of sheets, a grandmother laughing on a plastic chair.'),
  ], "Completa a frase nos comentários: \"eu era mais feliz quando...\"\n\n"
     "A gente lê todas. E talvez a sua resposta seja o lembrete que alguém precisava. 🤍\n\n"
     "#completeafrase #nostalgia #reflexão #felicidade #verdadesatemporais"),
@@ -306,18 +352,27 @@ P = {p[0]: p for p in POSTS}
 
 def email(chave):
     k, num, data, hora, ideia, elenco, slides, leg = P[chave]
-    pre = f'va-{k}'
-    linhas = [f'Generate {len(slides)} separate illustration{"s" if len(slides) > 1 else ""}, one image per item below. '
+    c = CAT[CATEGORIA[k]]
+    pre = f'{PREFIXO}-{k}'
+    n = max(len(slides), 2)  # a automação falha com pedido de uma imagem só; o extra fica de reserva
+    cenas = [cena for _t, cena in slides]
+    if len(cenas) == 1:
+        cenas.append(cenas[0] + ' Alternative composition, different angle.')
+    linhas = [f'Generate {n} separate illustrations, one image per item below. '
               'Do not ask me anything. Save each with the exact file name given.', '',
-              f'THE IDEA OF THIS POST: {ideia}.', f'CHARACTERS: {elenco} Keep the same look in every image where they appear.', '',
-              f'STYLE (same for all): {ESTILO}', '']
-    for i, (_t, cena) in enumerate(slides, 1):
+              f'THE IDEA OF THIS POST: {ideia}.',
+              f'CHARACTERS: {elenco} Keep the same look in every image where they appear.', '',
+              f'STYLE (same for all): {ESTILO}',
+              f'COLOR PALETTE (use only this palette, it defines this series): {c["paleta"]}.',
+              f'WORLD: {c["mundo"]}.', f'TYPE OF CHARACTERS: {c["elenco"]}.', f'TYPICAL OBJECTS: {c["objetos"]}.', '']
+    for i, cena in enumerate(cenas, 1):
         linhas.append(f'{pre}{i:02d}: {cena}')
     return '\n'.join(linhas)
 
 
 def imagem(chave, n):
-    for cand in (f'va-{chave}{n:02d}c.png', f'va-{chave}{n:02d}b.png', f'va-{chave}{n:02d}.png'):
+    for cand in (f'{PREFIXO}-{chave}{n:02d}b.png', f'{PREFIXO}-{chave}{n:02d}.png',
+                 f'va-{chave}{n:02d}c.png', f'va-{chave}{n:02d}b.png', f'va-{chave}{n:02d}.png'):
         p = os.path.join(FOTOS, cand)
         if os.path.exists(p):
             return p
@@ -326,20 +381,21 @@ def imagem(chave, n):
 LIMITE = 455  # o título não passa do terço de cima
 
 
-def escrever_titulo(img, linhas, seed):
+def escrever_titulo(img, linhas, seed, tinta=TINTA):
     """Escreve o letreiro e, se passar do LIMITE, reduz tudo proporcionalmente e tenta de novo."""
     fator = 1.0
     for _t in range(6):
         esc = [(t, round(a * fator)) for t, a in linhas]
-        out, y = _titulo(img, esc, seed)
+        out, y = _titulo(img, esc, seed, tinta)
         if y <= LIMITE:
             return out, y
         fator *= (LIMITE - 70) / (y - 70) * 0.98
     return out, y
 
 
-def _titulo(img, linhas, seed):
-    cor = CREME if luminancia(img, (100, 60, W - 100, 400)) < 110 else TINTA
+def _titulo(img, linhas, seed, tinta=TINTA):
+    escura = sum(tinta) < 300
+    cor = CREME if luminancia(img, (100, 60, W - 100, 400)) < 110 else (tinta if escura else TINTA)
     y, grupo = 70, []
     for txt, alt in linhas + [('', 0)]:
         if txt:
@@ -361,7 +417,7 @@ def gerar(chave):
         if not p:
             print('falta', f'va-{chave}{i:02d}'); continue
         img = grao(preencher(Image.open(p)), 3, seed=i)
-        img, _y = escrever_titulo(img, linhas, i * 7)
+        img, _y = escrever_titulo(img, linhas, i * 7, CAT[CATEGORIA[chave]]['tinta'])
         assinatura(img).save(os.path.join(saida, f'{i:02d}.jpg'), quality=93)
         feitos += 1
     print(chave, feitos, 'de', len(slides))
