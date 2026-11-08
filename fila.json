@@ -1163,24 +1163,6 @@
   "legenda": "Amadurecer quase nunca vem com festa. Vem num \"não\" dito sem culpa, numa saída cedo, numa tarde sem plano.\n\nQual desses sinais você já percebeu em você? Manda pra quem está crescendo calado. 🤍\n\n#amadurecimento #autoconhecimento #pazinterior #reflexão #verdadesatemporais"
  },
  {
-  "numero": "rb-011",
-  "chave": "rb-011",
-  "data": "2026-11-09",
-  "hora": "12:00",
-  "destinos": [
-   "instagram",
-   "facebook"
-  ],
-  "imagens": [
-   "posts/rb-011-pequenas/01.jpg",
-   "posts/rb-011-pequenas/02.jpg",
-   "posts/rb-011-pequenas/03.jpg",
-   "posts/rb-011-pequenas/04.jpg",
-   "posts/rb-011-pequenas/05.jpg"
-  ],
-  "legenda": "Nem todo dia ruim precisa de uma grande solução. Às vezes um ônibus vazio e alguém lembrando do seu nome já mudam tudo.\n\nQual coisa pequena salva o seu dia? Conta aqui. E manda esse post pra quem anda precisando. 🤍\n\n#gratidão #coisaspequenas #autocuidado #reflexão #verdadesatemporais"
- },
- {
   "numero": "rb-012",
   "chave": "rb-012",
   "data": "2026-11-09",
@@ -1291,5 +1273,23 @@
    "posts/rb-013-completa/02.jpg"
   ],
   "legenda": "Completa a frase nos comentários: \"eu era mais feliz quando...\"\n\nA gente lê todas. E talvez a sua resposta seja o lembrete que alguém precisava. 🤍\n\n#completeafrase #nostalgia #reflexão #felicidade #verdadesatemporais"
+ },
+ {
+  "numero": "rb-011",
+  "chave": "rb-011",
+  "data": "2026-11-09",
+  "hora": "12:00",
+  "destinos": [
+   "instagram",
+   "facebook"
+  ],
+  "imagens": [
+   "posts/rb-011-pequenas/01.jpg",
+   "posts/rb-011-pequenas/02.jpg",
+   "posts/rb-011-pequenas/03.jpg",
+   "posts/rb-011-pequenas/04.jpg",
+   "posts/rb-011-pequenas/05.jpg"
+  ],
+  "legenda": "Nem todo dia ruim precisa de uma grande solução. Às vezes um ônibus vazio e alguém lembrando do seu nome já mudam tudo.\n\nQual coisa pequena salva o seu dia? Conta aqui. E manda esse post pra quem anda precisando. 🤍\n\n#gratidão #coisaspequenas #autocuidado #reflexão #verdadesatemporais"
  }
 ]
