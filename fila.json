@@ -1163,22 +1163,6 @@
   "legenda": "Amadurecer quase nunca vem com festa. Vem num \"não\" dito sem culpa, numa saída cedo, numa tarde sem plano.\n\nQual desses sinais você já percebeu em você? Manda pra quem está crescendo calado. 🤍\n\n#amadurecimento #autoconhecimento #pazinterior #reflexão #verdadesatemporais"
  },
  {
-  "numero": "rb-008",
-  "chave": "rb-008",
-  "data": "2026-11-08",
-  "hora": "12:00",
-  "destinos": [
-   "instagram",
-   "facebook"
-  ],
-  "imagens": [
-   "posts/rb-008-enem/01.jpg",
-   "posts/rb-008-enem/02.jpg",
-   "posts/rb-008-enem/03.jpg"
-  ],
-  "legenda": "Hoje é dia de ENEM. Se você vai fazer a prova: respira, lê com calma e confia no que você estudou. Nenhuma nota diz quem você é.\n\nManda pra alguém que vai fazer a prova hoje e deixa um \"boa prova\" aqui nos comentários. 🤍\n\n#enem2026 #enem #vestibular #boaprova #verdadesatemporais"
- },
- {
   "numero": "rb-009",
   "chave": "rb-009",
   "data": "2026-11-08",
@@ -1291,5 +1275,21 @@
    "posts/rb-010-domingo/01.jpg"
   ],
   "legenda": "Domingo à noite tem um peso que ninguém explica direito. Não é preguiça nem drama: é cansaço acumulado.\n\nSe hoje bateu, respira. Amanhã você resolve uma coisa de cada vez. 🤍\n\n#domingoànoite #ansiedade #saúdemental #reflexão #verdadesatemporais"
+ },
+ {
+  "numero": "rb-008",
+  "chave": "rb-008",
+  "data": "2026-11-08",
+  "hora": "12:00",
+  "destinos": [
+   "instagram",
+   "facebook"
+  ],
+  "imagens": [
+   "posts/rb-008-enem/01.jpg",
+   "posts/rb-008-enem/02.jpg",
+   "posts/rb-008-enem/03.jpg"
+  ],
+  "legenda": "Hoje é dia de ENEM. Se você vai fazer a prova: respira, lê com calma e confia no que você estudou. Nenhuma nota diz quem você é.\n\nManda pra alguém que vai fazer a prova hoje e deixa um \"boa prova\" aqui nos comentários. 🤍\n\n#enem2026 #enem #vestibular #boaprova #verdadesatemporais"
  }
 ]
