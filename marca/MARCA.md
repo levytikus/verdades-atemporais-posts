@@ -22,3 +22,9 @@ Os olhos foram encurtados para não lembrar o ícone de pausa.
 | va-selo-amarelo.png / .svg | Assinatura de destaque sobre fundos escuros |
 
 Os PNG são gerados a partir dos SVG com: `rsvg-convert -w 1080 -h 1080 arquivo.svg -o arquivo-1080.png`
+
+## Logo em círculo e piscada (vídeos)
+- `va-circulo-1080.png`: círculo amarelo #FFCD11 com a carinha em preto, fundo transparente. É a logo usada nos vídeos (assinatura ao lado do @ e fechamento).
+- `piscada.py`: gera os quadros da logo piscando o olho direito (com um pulinho leve), para o fechamento dos vídeos. O olho fechado fica no mesmo centro do olho aberto. Uso: `python marca/piscada.py pasta_saida 280`.
+- `va-piscada.gif`: prévia da piscada.
+- Tempo usado no fechamento: fecha em 0,12 s, segura 0,12 s, abre em 0,16 s, cerca de 1,2 s depois de a logo aparecer.
