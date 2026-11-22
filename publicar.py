@@ -16,7 +16,9 @@ Cada item da fila pode ter:
   imagens  lista de imagens (post de foto ou carrossel)
   video    caminho de um .mp4 vertical: publica como Reel no Instagram e no Facebook.
            Se o Reel falhar e houver imagens, publica as imagens no lugar (não fica dia sem post).
-  story    caminho de uma imagem 1080x1920: publica como Story no Instagram e na página do Facebook.
+  story    caminho de uma imagem 1080x1920 ou de um .mp4 vertical (até 60 s): publica como Story
+           no Instagram e na página do Facebook.
+  no_feed  true = o Reel também aparece no feed/grade do perfil (padrão: só na aba Reels).
            Falha de Story só gera aviso (não derruba a execução); os horários reserva tentam de novo.
   chave    identificador no publicados.json (padrão: o número). Use quando o mesmo número sai
            duas vezes, ex.: "821-reel" para o Reel de um carrossel.
@@ -101,7 +103,7 @@ def esperar_video(container, token):
 
 def reel_instagram(ig, token, post, publicar=True):
     c = api('POST', f'{ig}/media', token, media_type='REELS', upload_type='resumable',
-            caption=post['legenda'], share_to_feed='false', thumb_offset='0')['id']
+            caption=post['legenda'], share_to_feed='true' if post.get('no_feed') else 'false', thumb_offset='0')['id']
     enviar_binario(f'{RUPLOAD}/ig-api-upload/{V}/{c}', token, post['video'])
     esperar_video(c, token)
     if not publicar: return c
@@ -117,12 +119,24 @@ def reel_facebook(page, token, post, publicar=True):
     return vid
 
 def story_instagram(ig, token, post, publicar=True):
+    if post['story'].endswith('.mp4'):
+        c = api('POST', f'{ig}/media', token, media_type='STORIES', upload_type='resumable')['id']
+        enviar_binario(f'{RUPLOAD}/ig-api-upload/{V}/{c}', token, post['story'])
+        esperar_video(c, token)
+        if not publicar: return c
+        return api('POST', f'{ig}/media_publish', token, creation_id=c)['id']
     c = api('POST', f'{ig}/media', token, media_type='STORIES', image_url=url(post['story']))['id']
     esperar(c, token)
     if not publicar: return c
     return api('POST', f'{ig}/media_publish', token, creation_id=c)['id']
 
 def story_facebook(page, token, post):
+    if post['story'].endswith('.mp4'):
+        ini = api('POST', f'{page}/video_stories', token, upload_phase='start')
+        vid = ini['video_id']
+        enviar_binario(ini.get('upload_url') or f'{RUPLOAD}/video-upload/{V}/{vid}', token, post['story'])
+        fim = api('POST', f'{page}/video_stories', token, upload_phase='finish', video_id=vid)
+        return fim.get('post_id', vid)
     foto = api('POST', f'{page}/photos', token, url=url(post['story']), published='false')['id']
     return api('POST', f'{page}/photo_stories', token, photo_id=foto).get('post_id', foto)
 
