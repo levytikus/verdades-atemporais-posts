@@ -120,8 +120,7 @@ def reel_facebook(page, token, post, publicar=True):
 
 def story_instagram(ig, token, post, publicar=True):
     if post['story'].endswith('.mp4'):
-        c = api('POST', f'{ig}/media', token, media_type='STORIES', upload_type='resumable')['id']
-        enviar_binario(f'{RUPLOAD}/ig-api-upload/{V}/{c}', token, post['story'])
+        c = api('POST', f'{ig}/media', token, media_type='STORIES', video_url=url(post['story']))['id']
         esperar_video(c, token)
         if not publicar: return c
         return api('POST', f'{ig}/media_publish', token, creation_id=c)['id']
