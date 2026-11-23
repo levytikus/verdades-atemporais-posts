@@ -58,9 +58,12 @@ def assinatura(fundo, prop):
     return fundo
 
 
+INTEIRA = False                       # --inteira: imagens do rebrand (sem Nº, já assinadas): não corta nem repete o @
+
+
 def preparar(caminho, cortar_rodape=True):
     img = Image.open(caminho).convert('RGB')
-    if cortar_rodape:
+    if cortar_rodape and not INTEIRA:
         k = img.height / 1350
         img = img.crop((0, round(TOPO * k), img.width, img.height - round(RODAPE * k)))
     # fundo: cobre 9:16, desfoca e escurece
@@ -69,7 +72,8 @@ def preparar(caminho, cortar_rodape=True):
     x, y = (fundo.width - W) // 2, (fundo.height - H) // 2
     fundo = fundo.crop((x, y, x + W, y + H)).filter(ImageFilter.GaussianBlur(42))
     fundo = ImageEnhance.Brightness(fundo).enhance(0.62)
-    fundo = assinatura(fundo, img.height / img.width)
+    if not INTEIRA:
+        fundo = assinatura(fundo, img.height / img.width)
     # frente em resolução alta para o zoom não perder nitidez
     base = img.resize((round(FRENTE_W * (1 + ZOOM) * 1.5), round(FRENTE_W * (1 + ZOOM) * 1.5 * img.height / img.width)), Image.LANCZOS)
     sombra = Image.new('L', (W, H), 0)
@@ -175,7 +179,10 @@ def main():
     ap.add_argument('--imagens', nargs='+')
     ap.add_argument('--numero', type=int)
     ap.add_argument('--saida')
+    ap.add_argument('--inteira', action='store_true', help='imagem do rebrand: sem cortar topo/rodapé e sem repetir o @')
     a = ap.parse_args()
+    global INTEIRA
+    INTEIRA = a.inteira
     if a.imagens:
         gerar(a.imagens, a.numero or 0, a.saida or 'reel.mp4'); return
     fila = json.loads((RAIZ / 'fila.json').read_text())
