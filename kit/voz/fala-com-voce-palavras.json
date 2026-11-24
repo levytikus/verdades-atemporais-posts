@@ -1,0 +1,269 @@
+{
+ "palavras": [
+  {
+   "palavra": "Repara",
+   "inicio": 0.0,
+   "fim": 0.76
+  },
+  {
+   "palavra": "no",
+   "inicio": 0.76,
+   "fim": 0.94
+  },
+  {
+   "palavra": "jeito",
+   "inicio": 0.94,
+   "fim": 1.2
+  },
+  {
+   "palavra": "que",
+   "inicio": 1.2,
+   "fim": 1.42
+  },
+  {
+   "palavra": "você",
+   "inicio": 1.42,
+   "fim": 1.84
+  },
+  {
+   "palavra": "fala",
+   "inicio": 1.84,
+   "fim": 2.04
+  },
+  {
+   "palavra": "com",
+   "inicio": 2.04,
+   "fim": 2.3
+  },
+  {
+   "palavra": "você.",
+   "inicio": 2.3,
+   "fim": 2.82
+  },
+  {
+   "palavra": "Quando",
+   "inicio": 3.24,
+   "fim": 3.52
+  },
+  {
+   "palavra": "erra,",
+   "inicio": 3.52,
+   "fim": 3.96
+  },
+  {
+   "palavra": "se",
+   "inicio": 4.16,
+   "fim": 4.26
+  },
+  {
+   "palavra": "chama",
+   "inicio": 4.26,
+   "fim": 4.44
+  },
+  {
+   "palavra": "de",
+   "inicio": 4.44,
+   "fim": 4.82
+  },
+  {
+   "palavra": "burro,",
+   "inicio": 4.82,
+   "fim": 5.26
+  },
+  {
+   "palavra": "de",
+   "inicio": 5.54,
+   "fim": 5.82
+  },
+  {
+   "palavra": "fraco,",
+   "inicio": 5.82,
+   "fim": 6.28
+  },
+  {
+   "palavra": "de",
+   "inicio": 6.56,
+   "fim": 6.72
+  },
+  {
+   "palavra": "incapaz.",
+   "inicio": 6.72,
+   "fim": 7.3
+  },
+  {
+   "palavra": "Você",
+   "inicio": 8.08,
+   "fim": 8.28
+  },
+  {
+   "palavra": "nunca",
+   "inicio": 8.28,
+   "fim": 8.66
+  },
+  {
+   "palavra": "falaria",
+   "inicio": 8.66,
+   "fim": 9.04
+  },
+  {
+   "palavra": "assim",
+   "inicio": 9.04,
+   "fim": 9.32
+  },
+  {
+   "palavra": "com",
+   "inicio": 9.32,
+   "fim": 9.5
+  },
+  {
+   "palavra": "quem",
+   "inicio": 9.5,
+   "fim": 9.64
+  },
+  {
+   "palavra": "você",
+   "inicio": 9.64,
+   "fim": 10.02
+  },
+  {
+   "palavra": "ama.",
+   "inicio": 10.02,
+   "fim": 10.22
+  },
+  {
+   "palavra": "Então,",
+   "inicio": 10.92,
+   "fim": 11.18
+  },
+  {
+   "palavra": "por",
+   "inicio": 11.46,
+   "fim": 11.54
+  },
+  {
+   "palavra": "que",
+   "inicio": 11.54,
+   "fim": 11.66
+  },
+  {
+   "palavra": "falar",
+   "inicio": 11.66,
+   "fim": 11.92
+  },
+  {
+   "palavra": "assim",
+   "inicio": 11.92,
+   "fim": 12.16
+  },
+  {
+   "palavra": "com",
+   "inicio": 12.16,
+   "fim": 12.42
+  },
+  {
+   "palavra": "você?",
+   "inicio": 12.42,
+   "fim": 12.72
+  },
+  {
+   "palavra": "Hoje,",
+   "inicio": 14.44,
+   "fim": 15.0
+  },
+  {
+   "palavra": "experimenta",
+   "inicio": 15.0,
+   "fim": 15.56
+  },
+  {
+   "palavra": "se",
+   "inicio": 15.56,
+   "fim": 15.9
+  },
+  {
+   "palavra": "tratar",
+   "inicio": 15.9,
+   "fim": 16.2
+  },
+  {
+   "palavra": "como",
+   "inicio": 16.2,
+   "fim": 16.46
+  },
+  {
+   "palavra": "trata",
+   "inicio": 16.46,
+   "fim": 16.84
+  },
+  {
+   "palavra": "o",
+   "inicio": 16.84,
+   "fim": 17.02
+  },
+  {
+   "palavra": "seu",
+   "inicio": 17.02,
+   "fim": 17.16
+  },
+  {
+   "palavra": "melhor",
+   "inicio": 17.16,
+   "fim": 17.4
+  },
+  {
+   "palavra": "amigo.",
+   "inicio": 17.4,
+   "fim": 17.72
+  },
+  {
+   "palavra": "Com",
+   "inicio": 18.42,
+   "fim": 18.58
+  },
+  {
+   "palavra": "paciência,",
+   "inicio": 18.58,
+   "fim": 19.36
+  },
+  {
+   "palavra": "com",
+   "inicio": 19.72,
+   "fim": 19.9
+  },
+  {
+   "palavra": "carinho.",
+   "inicio": 19.9,
+   "fim": 20.54
+  },
+  {
+   "palavra": "Você",
+   "inicio": 21.28,
+   "fim": 21.7
+  },
+  {
+   "palavra": "também",
+   "inicio": 21.7,
+   "fim": 22.18
+  },
+  {
+   "palavra": "merece",
+   "inicio": 22.18,
+   "fim": 22.64
+  },
+  {
+   "palavra": "a",
+   "inicio": 22.64,
+   "fim": 22.78
+  },
+  {
+   "palavra": "sua",
+   "inicio": 22.78,
+   "fim": 22.9
+  },
+  {
+   "palavra": "gentileza.",
+   "inicio": 22.9,
+   "fim": 23.46
+  }
+ ]
+}
