@@ -1,0 +1,42 @@
+name: Baixar clipe
+
+# Baixa um clipe de vídeo livre (Pixabay) para kit/clipes/<nome>.mp4.
+# Usado pelo Claude, porque o ambiente dele não acessa o endereço de download.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Endereço do vídeo'
+        required: true
+      nome:
+        description: 'Nome do arquivo (sem extensão), ex.: r08'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: baixar-clipe
+  cancel-in-progress: false
+
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar
+        env:
+          URL: ${{ github.event.inputs.url }}
+          NOME: ${{ github.event.inputs.nome }}
+        run: |
+          case "$NOME" in *[!a-z0-9-]*|'') echo "Nome inválido"; exit 1;; esac
+          mkdir -p kit/clipes
+          code=$(curl -sSL -A "Mozilla/5.0" -e "https://pixabay.com/" -o "kit/clipes/$NOME.mp4" -w '%{http_code}' "$URL")
+          echo "::notice::HTTP $code, $(stat -c %s kit/clipes/$NOME.mp4) bytes, $(file -b kit/clipes/$NOME.mp4)"
+          [ "$code" = 200 ] || exit 1
+          git config user.name "verdades-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "kit/clipes/$NOME.mp4"
+          git commit -m "Clipe $NOME"
+          git pull --rebase -q
+          git push
