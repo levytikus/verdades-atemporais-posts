@@ -2,11 +2,12 @@ name: Publicar post do dia
 
 on:
   schedule:
-    # Reels do meio-dia (12h em Brasília) e reservas
+    # Carrossel da manhã (11h30 em Brasília) e reservas
+    - cron: '30 14 * * *'   # 11h30
     - cron: '50 14 * * *'   # 11h50
     - cron: '7 15 * * *'    # 12h07
     - cron: '29 15 * * *'   # 12h29
-    # Post da noite (20h em Brasília)
+    # Reel narrado da noite (19h50 em Brasília)
     - cron: '50 22 * * *'   # 19h50 em Brasília; o GitHub costuma atrasar alguns minutos, então sai perto das 20h
     # Reservas: o agendador grátis do GitHub atrasa de 1 a 3 horas e às vezes pula horários.
     # O disparo principal é a tarefa agendada do Claude às 19h56. Estas rodadas só cobrem falhas:
