@@ -10,3 +10,12 @@ Decisão do Levy em 24/11/2026: narração com voz de IA (sem passo manual), tex
 5. Junte as partes, voz com 0,3 s de atraso e `kit/musicas/piano-reflexivo.mp3` baixinho, normalizado em -14 LUFS.
 
 Primeiro exemplo: `posts/reel-caber-1124/reel.mp4` ("Você não precisa se diminuir pra caber").
+
+## Tom: rodízio alegre e reflexivo (pedido do Levy em 24/11/2026)
+
+O Levy gostou da linha, mas os reflexivos quase caem no melancólico, e ele quer MAIS dos alegres. Regra: dois alegres, um reflexivo (nunca dois reflexivos seguidos). Veja o tom do último Reel em kit/historico.md e marque o novo ([alegre] ou [reflexivo]).
+
+- **Alegre** (pra cima): como a vida é boa, o poder da amizade, da família, das conquistas, das pequenas alegrias, da gratidão. Clipes claros e quentes: gente sorrindo, rindo junto, abraço, festa em casa, criança brincando, sol, praia, estrada, comemoração. Cor: saturation 0.95 a 1.0 e brightness 0 a -0.02 no fundo.py (não lavar a cor). Trilha: kit/musicas/alegre-sorriso.mp3, alegre-parque.mp3 ou alegre-ponte.mp3 (violão leve do Mixkit; alterne), volume 0.12. Voz: mesmo homem, com sorriso na voz e um pouco mais de energia, sem virar locutor.
+- **Reflexivo**: pode tocar na dor, mas termina sempre em luz (esperança, carinho, um convite). Nada de cena triste demais (choro, pessoa encolhida no chão, escuridão): prefira introspecção serena e luz. Trilha: piano-reflexivo.mp3 em 0.15.
+
+Na instrução de estilo da voz NUNCA ponha frases do roteiro entre aspas: em 24/11 o Gemini leu a instrução em voz alta (65 s). Cite só palavras soltas para ganhar peso.

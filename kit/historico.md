@@ -61,4 +61,6 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 
 ## Reels narrados (19h50, voz Gemini, clipes Mixkit)
 
-- **Reel narrado · qua 25/11/2026 · mulher na janela do ônibus, homem sentado no chão, mãe e filha, amigas rindo, mão no trigo ao pôr do sol, mulher sorrindo no mar:** Repara no jeito que você fala com você. Você nunca falaria assim com quem você ama. Se trata como trata o seu melhor amigo. Você também merece a sua gentileza.
+Cada linha marca o tom ([alegre] ou [reflexivo]). Rodízio pedido pelo Levy em 24/11/2026: dois alegres, um reflexivo. O Reel "caber" de 24/11 foi [reflexivo].
+
+- **Reel narrado · qua 25/11/2026 · [reflexivo] · mulher na janela do ônibus, homem sentado no chão, mãe e filha, amigas rindo, mão no trigo ao pôr do sol, mulher sorrindo no mar:** Repara no jeito que você fala com você. Você nunca falaria assim com quem você ama. Se trata como trata o seu melhor amigo. Você também merece a sua gentileza.
