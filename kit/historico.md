@@ -58,3 +58,7 @@ Frases já usadas, com a data de publicação (às 20h). Não repetir a ideia ce
 - **Reel · qui 29/10/2026 · bloco ao lado de luminária acesa de madrugada · caneta:** Você vê o resultado. Não viu as noites.
 - **Reel · sex 30/10/2026 · placa branca em estrada de terra ao pôr do sol · marcador:** A pressa de chegar faz a gente esquecer que o caminho também é a vida.
 - **Reel · sáb 31/10/2026 · livro de visitas numa mesa de festa · caneta:** Quem vai com você até o fim nem sempre estava lá no começo.
+
+## Reels narrados (19h50, voz Gemini, clipes Mixkit)
+
+- **Reel narrado · qua 25/11/2026 · mulher na janela do ônibus, homem sentado no chão, mãe e filha, amigas rindo, mão no trigo ao pôr do sol, mulher sorrindo no mar:** Repara no jeito que você fala com você. Você nunca falaria assim com quem você ama. Se trata como trata o seu melhor amigo. Você também merece a sua gentileza.
