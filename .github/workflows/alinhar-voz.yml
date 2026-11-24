@@ -1,0 +1,48 @@
+name: Alinhar narração
+
+# Marca o tempo de cada palavra de uma narração já gravada (ex.: voz do Gemini),
+# para a legenda palavra por palavra. Entrada: kit/voz/<nome>.wav ; saída: kit/voz/<nome>-palavras.json
+on:
+  workflow_dispatch:
+    inputs:
+      nome:
+        description: 'Nome do áudio em kit/voz (sem extensão)'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: alinhar-voz
+  cancel-in-progress: false
+
+jobs:
+  alinhar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Alinhar
+        env:
+          NOME: ${{ github.event.inputs.nome }}
+        run: |
+          case "$NOME" in *[!a-z0-9-]*|'') echo "Nome inválido"; exit 1;; esac
+          pip install -q faster-whisper
+          python - <<'PY'
+          import json, os
+          from faster_whisper import WhisperModel
+          nome = os.environ['NOME']
+          m = WhisperModel('medium', device='cpu', compute_type='int8')
+          segs, _ = m.transcribe(f'kit/voz/{nome}.wav', language='pt', word_timestamps=True, beam_size=5)
+          palavras = [{'palavra': w.word.strip(), 'inicio': round(w.start, 3), 'fim': round(w.end, 3)} for s in segs for w in s.words]
+          json.dump({'palavras': palavras}, open(f'kit/voz/{nome}-palavras.json', 'w'), ensure_ascii=False, indent=1)
+          print(len(palavras), 'palavras')
+          PY
+          git config user.name "verdades-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add kit/voz
+          git commit -m "Alinhamento $NOME"
+          git pull --rebase -q
+          git push
