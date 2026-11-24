@@ -5,7 +5,7 @@ X = 0.35
 # (arquivo, início no clipe)
 CENAS = [('c1-andando.mp4', 0.0), ('c2-escuro.mp4', 0.0), ('c2b-mao.mp4', 2.0),
          ('c3-multidao.mp4', 0.0), ('c2-escuro.mp4', 10.0), ('c6-juntos.mp4', 0.0)]
-T = [0, 4.5, 8.65, 10.25, 14.8, 21.5, 30.0]
+T = [0, 4.23, 8.95, 10.83, 15.19, 20.91, 27.7]
 
 ins, fil = [], []
 for i, (f, ss) in enumerate(CENAS):

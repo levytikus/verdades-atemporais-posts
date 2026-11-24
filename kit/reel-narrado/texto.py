@@ -6,18 +6,30 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 W, H, FPS = 1080, 1920, 30
 OFF = 0.30                         # a voz entra 0,3 s depois do início
-FIM_VOZ = 26.95                    # fim da fala no vídeo
-CARD = 27.25                       # entra o fechamento
+FIM_VOZ = 24.6                    # fim da fala no vídeo
+CARD = 24.95                       # entra o fechamento
 AMARELO = (255, 205, 17)
 VERD = '/home/claude/verdades/'
 SERIF = '/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf'
 SERIF_I = '/usr/share/fonts/truetype/google-fonts/Lora-Italic-Variable.ttf'
 POP = '/usr/share/fonts/truetype/google-fonts/Poppins-Medium.ttf'
 
-voz = json.load(open(VERD + 'kit/voz/caber.json'))
-tokens = voz['texto'].split()
-pal = voz['palavras']
-assert len(tokens) == len(pal)
+import difflib, unicodedata
+tokens = json.load(open(VERD + 'kit/voz/caber.json'))['texto'].split()
+ali = json.load(open(VERD + 'kit/voz/caber-gemini-palavras.json'))['palavras']
+def norm(w):
+    w = ''.join(c for c in unicodedata.normalize('NFD', w.lower()) if c.isalpha())
+    return {'para': 'pra'}.get(w, w)
+a_, b_ = [norm(t) for t in tokens], [norm(w['palavra']) for w in ali]
+tempo = [None] * len(tokens)
+for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a_, b_, autojunk=False).get_opcodes():
+    for k in range(i2 - i1):
+        if j1 + k < j2:
+            tempo[i1 + k] = ali[j1 + k]['inicio']
+for i in range(len(tempo)):
+    if tempo[i] is None:
+        tempo[i] = tempo[i - 1] + 0.15
+pal = [{'inicio': t} for t in tempo]
 DESTAQUE = {'diminuir', 'prisão.', 'inteiro.', 'por', 'completo.'}
 # frases (índices de palavra) em que a tela troca
 QUEBRAS = [0, 10, 21, 23, 35, 44, 48, 60]
