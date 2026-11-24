@@ -1,0 +1,309 @@
+{
+ "palavras": [
+  {
+   "palavra": "Você",
+   "inicio": 0.0,
+   "fim": 0.52
+  },
+  {
+   "palavra": "não",
+   "inicio": 0.52,
+   "fim": 0.7
+  },
+  {
+   "palavra": "precisa",
+   "inicio": 0.7,
+   "fim": 1.22
+  },
+  {
+   "palavra": "se",
+   "inicio": 1.22,
+   "fim": 1.6
+  },
+  {
+   "palavra": "diminuir",
+   "inicio": 1.6,
+   "fim": 2.0
+  },
+  {
+   "palavra": "para",
+   "inicio": 2.0,
+   "fim": 2.2
+  },
+  {
+   "palavra": "caber",
+   "inicio": 2.2,
+   "fim": 2.56
+  },
+  {
+   "palavra": "em",
+   "inicio": 2.56,
+   "fim": 2.68
+  },
+  {
+   "palavra": "lugar",
+   "inicio": 2.68,
+   "fim": 2.92
+  },
+  {
+   "palavra": "nenhum.",
+   "inicio": 2.92,
+   "fim": 3.5
+  },
+  {
+   "palavra": "Se",
+   "inicio": 4.08,
+   "fim": 4.18
+  },
+  {
+   "palavra": "para",
+   "inicio": 4.18,
+   "fim": 4.36
+  },
+  {
+   "palavra": "ficar,",
+   "inicio": 4.36,
+   "fim": 4.74
+  },
+  {
+   "palavra": "você",
+   "inicio": 5.68,
+   "fim": 5.76
+  },
+  {
+   "palavra": "tem",
+   "inicio": 5.76,
+   "fim": 5.9
+  },
+  {
+   "palavra": "que",
+   "inicio": 5.9,
+   "fim": 6.04
+  },
+  {
+   "palavra": "se",
+   "inicio": 6.04,
+   "fim": 6.26
+  },
+  {
+   "palavra": "apagar.",
+   "inicio": 6.26,
+   "fim": 6.84
+  },
+  {
+   "palavra": "Não",
+   "inicio": 7.56,
+   "fim": 7.66
+  },
+  {
+   "palavra": "é",
+   "inicio": 7.66,
+   "fim": 7.74
+  },
+  {
+   "palavra": "lugar.",
+   "inicio": 7.74,
+   "fim": 8.04
+  },
+  {
+   "palavra": "É",
+   "inicio": 8.8,
+   "fim": 9.04
+  },
+  {
+   "palavra": "prisão.",
+   "inicio": 9.04,
+   "fim": 9.74
+  },
+  {
+   "palavra": "Tem",
+   "inicio": 10.68,
+   "fim": 10.8
+  },
+  {
+   "palavra": "gente",
+   "inicio": 10.8,
+   "fim": 11.04
+  },
+  {
+   "palavra": "que",
+   "inicio": 11.04,
+   "fim": 11.32
+  },
+  {
+   "palavra": "só",
+   "inicio": 11.32,
+   "fim": 11.48
+  },
+  {
+   "palavra": "gosta",
+   "inicio": 11.48,
+   "fim": 11.72
+  },
+  {
+   "palavra": "da",
+   "inicio": 11.72,
+   "fim": 11.88
+  },
+  {
+   "palavra": "versão",
+   "inicio": 11.88,
+   "fim": 12.16
+  },
+  {
+   "palavra": "de",
+   "inicio": 12.16,
+   "fim": 12.46
+  },
+  {
+   "palavra": "você",
+   "inicio": 12.46,
+   "fim": 12.68
+  },
+  {
+   "palavra": "que",
+   "inicio": 12.68,
+   "fim": 13.14
+  },
+  {
+   "palavra": "não",
+   "inicio": 13.14,
+   "fim": 13.36
+  },
+  {
+   "palavra": "incomoda.",
+   "inicio": 13.36,
+   "fim": 13.96
+  },
+  {
+   "palavra": "Mas",
+   "inicio": 15.04,
+   "fim": 15.32
+  },
+  {
+   "palavra": "você",
+   "inicio": 15.32,
+   "fim": 15.66
+  },
+  {
+   "palavra": "não",
+   "inicio": 15.66,
+   "fim": 15.82
+  },
+  {
+   "palavra": "nasceu",
+   "inicio": 15.82,
+   "fim": 16.1
+  },
+  {
+   "palavra": "para",
+   "inicio": 16.1,
+   "fim": 16.32
+  },
+  {
+   "palavra": "ser",
+   "inicio": 16.32,
+   "fim": 16.62
+  },
+  {
+   "palavra": "confortável",
+   "inicio": 16.62,
+   "fim": 17.34
+  },
+  {
+   "palavra": "para",
+   "inicio": 17.34,
+   "fim": 17.52
+  },
+  {
+   "palavra": "os",
+   "inicio": 17.52,
+   "fim": 17.68
+  },
+  {
+   "palavra": "outros.",
+   "inicio": 17.68,
+   "fim": 18.0
+  },
+  {
+   "palavra": "Nasceu",
+   "inicio": 18.9,
+   "fim": 19.14
+  },
+  {
+   "palavra": "para",
+   "inicio": 19.14,
+   "fim": 19.3
+  },
+  {
+   "palavra": "ser",
+   "inicio": 19.3,
+   "fim": 19.44
+  },
+  {
+   "palavra": "inteiro.",
+   "inicio": 19.44,
+   "fim": 19.8
+  },
+  {
+   "palavra": "E",
+   "inicio": 20.76,
+   "fim": 20.9
+  },
+  {
+   "palavra": "quem",
+   "inicio": 20.9,
+   "fim": 21.0
+  },
+  {
+   "palavra": "for",
+   "inicio": 21.0,
+   "fim": 21.12
+  },
+  {
+   "palavra": "para",
+   "inicio": 21.12,
+   "fim": 21.32
+  },
+  {
+   "palavra": "ficar,",
+   "inicio": 21.32,
+   "fim": 21.78
+  },
+  {
+   "palavra": "vai",
+   "inicio": 22.38,
+   "fim": 22.46
+  },
+  {
+   "palavra": "saber",
+   "inicio": 22.46,
+   "fim": 22.72
+  },
+  {
+   "palavra": "lidar",
+   "inicio": 22.72,
+   "fim": 22.94
+  },
+  {
+   "palavra": "com",
+   "inicio": 22.94,
+   "fim": 23.1
+  },
+  {
+   "palavra": "você",
+   "inicio": 23.1,
+   "fim": 23.42
+  },
+  {
+   "palavra": "por",
+   "inicio": 23.42,
+   "fim": 23.7
+  },
+  {
+   "palavra": "completo.",
+   "inicio": 23.7,
+   "fim": 24.14
+  }
+ ]
+}
