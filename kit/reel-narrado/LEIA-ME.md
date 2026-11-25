@@ -19,3 +19,9 @@ O Levy gostou da linha, mas os reflexivos quase caem no melancólico, e ele quer
 - **Reflexivo**: pode tocar na dor, mas termina sempre em luz (esperança, carinho, um convite). Nada de cena triste demais (choro, pessoa encolhida no chão, escuridão): prefira introspecção serena e luz. Trilha: piano-reflexivo.mp3 em 0.15.
 
 Na instrução de estilo da voz NUNCA ponha frases do roteiro entre aspas: em 24/11 o Gemini leu a instrução em voz alta (65 s). Cite só palavras soltas para ganhar peso.
+
+## Obrigatório desde 25/11/2026: capa e feed (pedido do Levy)
+
+- A grade do perfil intercala 1 Reel, 1 carrossel. Todo Reel entra na fila com `"no_feed": true` (vai para o feed) e com `"capa": "posts/<pasta>/capa.jpg"`.
+- A capa é feita com `capa.py` (veja o cabeçalho do script): quadro claro do clipe, a frase de abertura grande no centro da área 3:4 e a assinatura. Confira o recorte y 240 a 1680. Capa escura ou o 1º quadro do vídeo (sai preto) nunca mais.
+- Reel de imagem parada não entra mais na fila.
