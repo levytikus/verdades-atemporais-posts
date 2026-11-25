@@ -25,3 +25,10 @@ Decisão do Levy com base nos insights de 26/10 a 22/11: com 3 posts por dia, a 
 ## Ritmo desde 24/11/2026
 
 Decisão do Levy: **carrossel às 11h30 e Reel narrado às 19h50**, todo dia. Os Reels seguem o modelo aprovado em 24/11 (`kit/reel-narrado/`, voz do Gemini Achird pelo repositório ctd-imagens, clipes reais, legenda palavra por palavra). Os Reels de imagem parada (rb-057, 063, 066, 069, 070 e 030) saíram da fila e ficam de reserva em `posts/`. O disparo principal é a tarefa agendada do Claude (11h29 e 19h49); os crons do GitHub são reserva.
+
+## Grade intercalada e capas (25/11/2026)
+
+Pedido do Levy: a grade do perfil intercala perfeitamente 1 Reel, 1 carrossel, 1 Reel, 1 carrossel. Por isso:
+- Todo Reel narrado vai também para o feed (`"no_feed": true` na fila, que liga o share_to_feed) e sai só no modelo aprovado (voz Gemini, clipes reais, legenda palavra por palavra). Reel de imagem parada não entra mais.
+- A ordem de publicação nunca pode ter dois do mesmo tipo seguidos no feed. Em 25/11 o carrossel da manhã foi cancelado (só Reel no dia) porque o último post do feed era carrossel; os carrosséis andaram um dia. Daqui pra frente: carrossel 11h30, Reel 19h50.
+- Capa: todo Reel leva `"capa": "posts/<pasta>/capa.jpg"`, feita com `kit/reel-narrado/capa.py` (quadro limpo do clipe, frase de abertura grande no centro da área 3:4 da grade, destaque em amarelo, assinatura). Sem capa, o publicador usa `capa_ms` (padrão 3000 ms), nunca o 1º quadro, que sai preto.

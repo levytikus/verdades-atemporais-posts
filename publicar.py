@@ -102,8 +102,10 @@ def esperar_video(container, token):
     raise RuntimeError(f'Tempo esgotado processando o vídeo {container}')
 
 def reel_instagram(ig, token, post, publicar=True):
+    # capa: imagem própria (cover_url) ou um quadro escolhido; nunca o 1º quadro, que sai preto
+    capa = {'cover_url': url(post['capa'])} if post.get('capa') else {'thumb_offset': str(post.get('capa_ms', 3000))}
     c = api('POST', f'{ig}/media', token, media_type='REELS', upload_type='resumable',
-            caption=post['legenda'], share_to_feed='true' if post.get('no_feed') else 'false', thumb_offset='0')['id']
+            caption=post['legenda'], share_to_feed='true' if post.get('no_feed') else 'false', **capa)['id']
     enviar_binario(f'{RUPLOAD}/ig-api-upload/{V}/{c}', token, post['video'])
     esperar_video(c, token)
     if not publicar: return c
