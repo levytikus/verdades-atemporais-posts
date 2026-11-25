@@ -1,0 +1,299 @@
+{
+ "palavras": [
+  {
+   "palavra": "Tem",
+   "inicio": 0.72,
+   "fim": 1.32
+  },
+  {
+   "palavra": "gente",
+   "inicio": 1.32,
+   "fim": 1.56
+  },
+  {
+   "palavra": "que",
+   "inicio": 1.56,
+   "fim": 1.72
+  },
+  {
+   "palavra": "deixa",
+   "inicio": 1.72,
+   "fim": 1.96
+  },
+  {
+   "palavra": "a",
+   "inicio": 1.96,
+   "fim": 2.1
+  },
+  {
+   "palavra": "vida",
+   "inicio": 2.1,
+   "fim": 2.34
+  },
+  {
+   "palavra": "mais",
+   "inicio": 2.34,
+   "fim": 2.78
+  },
+  {
+   "palavra": "leve,",
+   "inicio": 2.78,
+   "fim": 3.12
+  },
+  {
+   "palavra": "só",
+   "inicio": 3.46,
+   "fim": 3.56
+  },
+  {
+   "palavra": "de",
+   "inicio": 3.56,
+   "fim": 3.68
+  },
+  {
+   "palavra": "estar",
+   "inicio": 3.68,
+   "fim": 3.88
+  },
+  {
+   "palavra": "perto,",
+   "inicio": 3.88,
+   "fim": 4.26
+  },
+  {
+   "palavra": "que",
+   "inicio": 4.8,
+   "fim": 4.98
+  },
+  {
+   "palavra": "transforma",
+   "inicio": 4.98,
+   "fim": 5.28
+  },
+  {
+   "palavra": "uma",
+   "inicio": 5.28,
+   "fim": 5.68
+  },
+  {
+   "palavra": "terça",
+   "inicio": 5.68,
+   "fim": 6.08
+  },
+  {
+   "palavra": "qualquer",
+   "inicio": 6.08,
+   "fim": 6.52
+  },
+  {
+   "palavra": "numa",
+   "inicio": 6.52,
+   "fim": 6.82
+  },
+  {
+   "palavra": "história",
+   "inicio": 6.82,
+   "fim": 7.26
+  },
+  {
+   "palavra": "pra",
+   "inicio": 7.26,
+   "fim": 7.48
+  },
+  {
+   "palavra": "contar,",
+   "inicio": 7.48,
+   "fim": 7.92
+  },
+  {
+   "palavra": "que",
+   "inicio": 8.46,
+   "fim": 8.58
+  },
+  {
+   "palavra": "ri",
+   "inicio": 8.58,
+   "fim": 8.68
+  },
+  {
+   "palavra": "das",
+   "inicio": 8.68,
+   "fim": 8.84
+  },
+  {
+   "palavra": "mesmas",
+   "inicio": 8.84,
+   "fim": 9.26
+  },
+  {
+   "palavra": "bobagens",
+   "inicio": 9.26,
+   "fim": 9.78
+  },
+  {
+   "palavra": "que",
+   "inicio": 9.78,
+   "fim": 9.94
+  },
+  {
+   "palavra": "você",
+   "inicio": 9.94,
+   "fim": 10.42
+  },
+  {
+   "palavra": "até",
+   "inicio": 10.42,
+   "fim": 10.82
+  },
+  {
+   "palavra": "a",
+   "inicio": 10.82,
+   "fim": 11.0
+  },
+  {
+   "palavra": "barriga",
+   "inicio": 11.0,
+   "fim": 11.36
+  },
+  {
+   "palavra": "doer,",
+   "inicio": 11.36,
+   "fim": 11.88
+  },
+  {
+   "palavra": "que",
+   "inicio": 12.24,
+   "fim": 12.38
+  },
+  {
+   "palavra": "comemora",
+   "inicio": 12.38,
+   "fim": 12.7
+  },
+  {
+   "palavra": "suas",
+   "inicio": 12.7,
+   "fim": 12.92
+  },
+  {
+   "palavra": "vitórias",
+   "inicio": 12.92,
+   "fim": 13.42
+  },
+  {
+   "palavra": "como",
+   "inicio": 13.42,
+   "fim": 13.72
+  },
+  {
+   "palavra": "se",
+   "inicio": 13.72,
+   "fim": 14.0
+  },
+  {
+   "palavra": "fossem",
+   "inicio": 14.0,
+   "fim": 14.4
+  },
+  {
+   "palavra": "dela",
+   "inicio": 14.4,
+   "fim": 14.56
+  },
+  {
+   "palavra": "também.",
+   "inicio": 14.56,
+   "fim": 15.04
+  },
+  {
+   "palavra": "Se",
+   "inicio": 15.64,
+   "fim": 15.74
+  },
+  {
+   "palavra": "você",
+   "inicio": 15.74,
+   "fim": 15.9
+  },
+  {
+   "palavra": "tem",
+   "inicio": 15.9,
+   "fim": 16.04
+  },
+  {
+   "palavra": "alguém",
+   "inicio": 16.04,
+   "fim": 16.28
+  },
+  {
+   "palavra": "assim,",
+   "inicio": 16.28,
+   "fim": 16.76
+  },
+  {
+   "palavra": "você",
+   "inicio": 17.18,
+   "fim": 17.28
+  },
+  {
+   "palavra": "já",
+   "inicio": 17.28,
+   "fim": 17.56
+  },
+  {
+   "palavra": "ganhou",
+   "inicio": 17.56,
+   "fim": 17.82
+  },
+  {
+   "palavra": "na",
+   "inicio": 17.82,
+   "fim": 17.98
+  },
+  {
+   "palavra": "vida.",
+   "inicio": 17.98,
+   "fim": 18.4
+  },
+  {
+   "palavra": "Agradece",
+   "inicio": 19.44,
+   "fim": 20.04
+  },
+  {
+   "palavra": "e",
+   "inicio": 20.04,
+   "fim": 20.58
+  },
+  {
+   "palavra": "manda",
+   "inicio": 20.58,
+   "fim": 20.8
+  },
+  {
+   "palavra": "isso",
+   "inicio": 20.8,
+   "fim": 21.0
+  },
+  {
+   "palavra": "pra",
+   "inicio": 21.0,
+   "fim": 21.1
+  },
+  {
+   "palavra": "essa",
+   "inicio": 21.1,
+   "fim": 21.22
+  },
+  {
+   "palavra": "pessoa",
+   "inicio": 21.22,
+   "fim": 21.5
+  },
+  {
+   "palavra": "agora.",
+   "inicio": 21.5,
+   "fim": 21.8
+  }
+ ]
+}
