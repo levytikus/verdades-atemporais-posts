@@ -1,0 +1,304 @@
+{
+ "palavras": [
+  {
+   "palavra": "Pequena",
+   "inicio": 0.0,
+   "fim": 0.5
+  },
+  {
+   "palavra": "vitória",
+   "inicio": 0.5,
+   "fim": 1.14
+  },
+  {
+   "palavra": "também",
+   "inicio": 1.14,
+   "fim": 1.62
+  },
+  {
+   "palavra": "merece",
+   "inicio": 1.62,
+   "fim": 2.02
+  },
+  {
+   "palavra": "festa.",
+   "inicio": 2.02,
+   "fim": 2.46
+  },
+  {
+   "palavra": "A",
+   "inicio": 3.1,
+   "fim": 3.22
+  },
+  {
+   "palavra": "conta",
+   "inicio": 3.22,
+   "fim": 3.38
+  },
+  {
+   "palavra": "paga",
+   "inicio": 3.38,
+   "fim": 3.64
+  },
+  {
+   "palavra": "em",
+   "inicio": 3.64,
+   "fim": 3.78
+  },
+  {
+   "palavra": "dia.",
+   "inicio": 3.78,
+   "fim": 4.06
+  },
+  {
+   "palavra": "O",
+   "inicio": 4.72,
+   "fim": 4.98
+  },
+  {
+   "palavra": "sim",
+   "inicio": 4.98,
+   "fim": 5.18
+  },
+  {
+   "palavra": "que",
+   "inicio": 5.18,
+   "fim": 5.4
+  },
+  {
+   "palavra": "você",
+   "inicio": 5.4,
+   "fim": 5.6
+  },
+  {
+   "palavra": "ouviu",
+   "inicio": 5.6,
+   "fim": 6.02
+  },
+  {
+   "palavra": "depois",
+   "inicio": 6.02,
+   "fim": 6.24
+  },
+  {
+   "palavra": "de",
+   "inicio": 6.24,
+   "fim": 6.52
+  },
+  {
+   "palavra": "tanto",
+   "inicio": 6.52,
+   "fim": 6.72
+  },
+  {
+   "palavra": "não.",
+   "inicio": 6.72,
+   "fim": 7.04
+  },
+  {
+   "palavra": "A",
+   "inicio": 7.88,
+   "fim": 8.06
+  },
+  {
+   "palavra": "primeira",
+   "inicio": 8.06,
+   "fim": 8.26
+  },
+  {
+   "palavra": "corrida",
+   "inicio": 8.26,
+   "fim": 8.66
+  },
+  {
+   "palavra": "sem",
+   "inicio": 8.66,
+   "fim": 8.86
+  },
+  {
+   "palavra": "parar",
+   "inicio": 8.86,
+   "fim": 9.08
+  },
+  {
+   "palavra": "no",
+   "inicio": 9.08,
+   "fim": 9.26
+  },
+  {
+   "palavra": "meio.",
+   "inicio": 9.26,
+   "fim": 9.46
+  },
+  {
+   "palavra": "O",
+   "inicio": 10.28,
+   "fim": 10.46
+  },
+  {
+   "palavra": "almoço",
+   "inicio": 10.46,
+   "fim": 10.84
+  },
+  {
+   "palavra": "de",
+   "inicio": 10.84,
+   "fim": 11.0
+  },
+  {
+   "palavra": "domingo",
+   "inicio": 11.0,
+   "fim": 11.28
+  },
+  {
+   "palavra": "com",
+   "inicio": 11.28,
+   "fim": 11.66
+  },
+  {
+   "palavra": "todo",
+   "inicio": 11.66,
+   "fim": 12.0
+  },
+  {
+   "palavra": "mundo",
+   "inicio": 12.0,
+   "fim": 12.32
+  },
+  {
+   "palavra": "junto.",
+   "inicio": 12.32,
+   "fim": 12.92
+  },
+  {
+   "palavra": "Rindo",
+   "inicio": 13.3,
+   "fim": 13.58
+  },
+  {
+   "palavra": "alto.",
+   "inicio": 13.58,
+   "fim": 13.98
+  },
+  {
+   "palavra": "A",
+   "inicio": 15.16,
+   "fim": 15.28
+  },
+  {
+   "palavra": "vida",
+   "inicio": 15.28,
+   "fim": 15.48
+  },
+  {
+   "palavra": "boa",
+   "inicio": 15.48,
+   "fim": 15.82
+  },
+  {
+   "palavra": "não",
+   "inicio": 15.82,
+   "fim": 16.26
+  },
+  {
+   "palavra": "espera",
+   "inicio": 16.26,
+   "fim": 16.52
+  },
+  {
+   "palavra": "a",
+   "inicio": 16.52,
+   "fim": 16.84
+  },
+  {
+   "palavra": "grande",
+   "inicio": 16.84,
+   "fim": 17.12
+  },
+  {
+   "palavra": "conquista.",
+   "inicio": 17.12,
+   "fim": 17.84
+  },
+  {
+   "palavra": "Ela",
+   "inicio": 18.48,
+   "fim": 18.68
+  },
+  {
+   "palavra": "acontece",
+   "inicio": 18.68,
+   "fim": 19.04
+  },
+  {
+   "palavra": "toda",
+   "inicio": 19.04,
+   "fim": 19.32
+  },
+  {
+   "palavra": "semana.",
+   "inicio": 19.32,
+   "fim": 19.68
+  },
+  {
+   "palavra": "Então",
+   "inicio": 20.74,
+   "fim": 20.94
+  },
+  {
+   "palavra": "comemora.",
+   "inicio": 20.94,
+   "fim": 21.48
+  },
+  {
+   "palavra": "Você",
+   "inicio": 21.94,
+   "fim": 22.24
+  },
+  {
+   "palavra": "merece.",
+   "inicio": 22.24,
+   "fim": 22.92
+  },
+  {
+   "palavra": "E",
+   "inicio": 23.64,
+   "fim": 23.82
+  },
+  {
+   "palavra": "manda",
+   "inicio": 23.82,
+   "fim": 24.02
+  },
+  {
+   "palavra": "isso",
+   "inicio": 24.02,
+   "fim": 24.24
+  },
+  {
+   "palavra": "para",
+   "inicio": 24.24,
+   "fim": 24.48
+  },
+  {
+   "palavra": "quem",
+   "inicio": 24.48,
+   "fim": 24.68
+  },
+  {
+   "palavra": "comemora",
+   "inicio": 24.68,
+   "fim": 25.12
+  },
+  {
+   "palavra": "com",
+   "inicio": 25.12,
+   "fim": 25.36
+  },
+  {
+   "palavra": "você.",
+   "inicio": 25.36,
+   "fim": 25.58
+  }
+ ]
+}
