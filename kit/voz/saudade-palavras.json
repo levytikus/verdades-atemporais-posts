@@ -1,0 +1,294 @@
+{
+ "palavras": [
+  {
+   "palavra": "Saudade",
+   "inicio": 0.0,
+   "fim": 0.86
+  },
+  {
+   "palavra": "é",
+   "inicio": 0.86,
+   "fim": 1.24
+  },
+  {
+   "palavra": "o",
+   "inicio": 1.24,
+   "fim": 1.4
+  },
+  {
+   "palavra": "jeito",
+   "inicio": 1.4,
+   "fim": 1.56
+  },
+  {
+   "palavra": "que",
+   "inicio": 1.56,
+   "fim": 1.76
+  },
+  {
+   "palavra": "o",
+   "inicio": 1.76,
+   "fim": 1.92
+  },
+  {
+   "palavra": "amor",
+   "inicio": 1.92,
+   "fim": 2.14
+  },
+  {
+   "palavra": "encontrou",
+   "inicio": 2.14,
+   "fim": 2.54
+  },
+  {
+   "palavra": "de",
+   "inicio": 2.54,
+   "fim": 2.74
+  },
+  {
+   "palavra": "ficar.",
+   "inicio": 2.74,
+   "fim": 3.24
+  },
+  {
+   "palavra": "Dói",
+   "inicio": 4.06,
+   "fim": 4.26
+  },
+  {
+   "palavra": "lembrar",
+   "inicio": 4.26,
+   "fim": 4.52
+  },
+  {
+   "palavra": "da",
+   "inicio": 4.52,
+   "fim": 4.62
+  },
+  {
+   "palavra": "casa",
+   "inicio": 4.62,
+   "fim": 4.96
+  },
+  {
+   "palavra": "cheia,",
+   "inicio": 4.96,
+   "fim": 5.66
+  },
+  {
+   "palavra": "da",
+   "inicio": 5.98,
+   "fim": 6.06
+  },
+  {
+   "palavra": "vó",
+   "inicio": 6.06,
+   "fim": 6.28
+  },
+  {
+   "palavra": "chamando",
+   "inicio": 6.28,
+   "fim": 6.58
+  },
+  {
+   "palavra": "para",
+   "inicio": 6.58,
+   "fim": 6.74
+  },
+  {
+   "palavra": "o",
+   "inicio": 6.74,
+   "fim": 6.94
+  },
+  {
+   "palavra": "moço,",
+   "inicio": 6.94,
+   "fim": 7.42
+  },
+  {
+   "palavra": "do",
+   "inicio": 7.78,
+   "fim": 7.9
+  },
+  {
+   "palavra": "abraço",
+   "inicio": 7.9,
+   "fim": 8.24
+  },
+  {
+   "palavra": "que",
+   "inicio": 8.24,
+   "fim": 8.36
+  },
+  {
+   "palavra": "não",
+   "inicio": 8.36,
+   "fim": 8.5
+  },
+  {
+   "palavra": "volta",
+   "inicio": 8.5,
+   "fim": 8.72
+  },
+  {
+   "palavra": "mais.",
+   "inicio": 8.72,
+   "fim": 9.08
+  },
+  {
+   "palavra": "Mas",
+   "inicio": 10.02,
+   "fim": 10.14
+  },
+  {
+   "palavra": "só",
+   "inicio": 10.14,
+   "fim": 10.28
+  },
+  {
+   "palavra": "dói",
+   "inicio": 10.28,
+   "fim": 10.52
+  },
+  {
+   "palavra": "assim",
+   "inicio": 10.52,
+   "fim": 10.76
+  },
+  {
+   "palavra": "o",
+   "inicio": 10.76,
+   "fim": 10.84
+  },
+  {
+   "palavra": "que",
+   "inicio": 10.84,
+   "fim": 10.92
+  },
+  {
+   "palavra": "foi",
+   "inicio": 10.92,
+   "fim": 11.1
+  },
+  {
+   "palavra": "bom",
+   "inicio": 11.1,
+   "fim": 11.26
+  },
+  {
+   "palavra": "de",
+   "inicio": 11.26,
+   "fim": 11.46
+  },
+  {
+   "palavra": "verdade.",
+   "inicio": 11.46,
+   "fim": 11.9
+  },
+  {
+   "palavra": "Então",
+   "inicio": 12.7,
+   "fim": 12.92
+  },
+  {
+   "palavra": "não",
+   "inicio": 12.92,
+   "fim": 13.34
+  },
+  {
+   "palavra": "foge",
+   "inicio": 13.34,
+   "fim": 13.56
+  },
+  {
+   "palavra": "da",
+   "inicio": 13.56,
+   "fim": 13.7
+  },
+  {
+   "palavra": "lembrança,",
+   "inicio": 13.7,
+   "fim": 14.44
+  },
+  {
+   "palavra": "sorri",
+   "inicio": 14.76,
+   "fim": 14.98
+  },
+  {
+   "palavra": "pra",
+   "inicio": 14.98,
+   "fim": 15.2
+  },
+  {
+   "palavra": "ela,",
+   "inicio": 15.2,
+   "fim": 15.64
+  },
+  {
+   "palavra": "agradece",
+   "inicio": 16.14,
+   "fim": 16.52
+  },
+  {
+   "palavra": "por",
+   "inicio": 16.52,
+   "fim": 16.7
+  },
+  {
+   "palavra": "ter",
+   "inicio": 16.7,
+   "fim": 16.92
+  },
+  {
+   "palavra": "vivido",
+   "inicio": 16.92,
+   "fim": 17.34
+  },
+  {
+   "palavra": "tudo",
+   "inicio": 17.34,
+   "fim": 17.58
+  },
+  {
+   "palavra": "isso.",
+   "inicio": 17.58,
+   "fim": 18.06
+  },
+  {
+   "palavra": "E",
+   "inicio": 18.64,
+   "fim": 18.82
+  },
+  {
+   "palavra": "abraça",
+   "inicio": 18.82,
+   "fim": 19.12
+  },
+  {
+   "palavra": "hoje",
+   "inicio": 19.12,
+   "fim": 19.52
+  },
+  {
+   "palavra": "quem",
+   "inicio": 19.52,
+   "fim": 20.0
+  },
+  {
+   "palavra": "ainda",
+   "inicio": 20.0,
+   "fim": 20.24
+  },
+  {
+   "palavra": "está",
+   "inicio": 20.24,
+   "fim": 20.44
+  },
+  {
+   "palavra": "aqui.",
+   "inicio": 20.44,
+   "fim": 20.64
+  }
+ ]
+}
